@@ -1,0 +1,3597 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Médico Deportivo Online Chile | Dr. Gerson Piña</title>
+  <meta name="description" content="Médico deportivo online en Chile. Prescripción de ejercicio segura para HTA, DM2 y obesidad. 100% telemedicina. Agenda con el Dr. Gerson Piña.">
+  <link rel="canonical" href="https://drgersonpina.cl">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dr. Gerson Piña — El médico que te explica cómo hacer ejercicio con tu condición">
+  <meta property="og:description" content="Evaluación e inicio de ejercicio seguro para personas con HTA, diabetes, colesterol y obesidad. 100% online desde Chile.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_CL">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dr. Gerson Piña — Medicina Deportiva Online Chile">
+  <meta name="twitter:description" content="Ejercicio seguro con HTA, diabetes, colesterol y obesidad. Consulta médica 100% online.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Physician",
+    "name": "Dr. Gerson Javier Piña Chirinos",
+    "description": "Médico Cirujano con Diplomado en Medicina Deportiva y Fisiología del Ejercicio. Manejo de pacientes crónicos (HTA, DM2, dislipidemia, obesidad). Ex atleta de alto rendimiento. Prescripción de ejercicio segura 100% online desde Chile.",
+    "medicalSpecialty": "Sports Medicine",
+    "url": "https://drgersonpina.cl",
+    "sameAs": [
+      "https://www.instagram.com/drgersonpina/",
+      "https://www.linkedin.com/in/dr-gerson-pi%C3%B1a-chirinos-00095540a/"
+    ],
+    "availableService": [
+      {
+        "@type": "MedicalTherapy",
+        "name": "Evaluación e inicio de ejercicio para pacientes crónicos",
+        "description": "Consulta online para personas con HTA, DM2, dislipidemia u obesidad que desean iniciar actividad física de forma segura"
+      },
+      {
+        "@type": "MedicalTherapy",
+        "name": "Control médico deportivo para alto rendimiento",
+        "description": "Evaluación, prescripción y seguimiento médico para deportistas recreacionales y de alto rendimiento"
+      }
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Chile"
+    }
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES
+    ============================================================ */
+    :root {
+      /* Colores principales */
+      --azul-primario:      #1D4ED8;
+      --azul-noche:         #0F2044;
+      --cian-kinetico:      #00C2FF;
+      --blanco-nieve:       #F8FAFF;
+      --gris-azulado:       #EFF6FF;
+      --ambar-cta:          #F59E0B;
+      --carbon:             #111827;
+      --gris-body:          #374151;
+
+      /* Colores de soporte */
+      --blanco-puro:        #FFFFFF;
+      --gris-borde:         #D1D5DB;
+      --gris-placeholder:   #9CA3AF;
+      --verde-confirmacion: #10B981;
+      --rojo-error:         #EF4444;
+      --azul-hover:         #1E40AF;
+      --ambar-hover:        #D97706;
+
+      /* Tipografía */
+      --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+
+      --text-eyebrow:  0.75rem;
+      --text-caption:  0.8125rem;
+      --text-body-sm:  0.9375rem;
+      --text-body:     clamp(1rem, 2vw, 1.125rem);
+      --text-subtitle: clamp(1rem, 2.2vw, 1.25rem);
+      --text-h3:       clamp(1.1rem, 2.5vw, 1.375rem);
+      --text-h2:       clamp(1.5rem, 3.5vw, 2.25rem);
+      --text-h1:       clamp(2rem, 5vw, 3.5rem);
+
+      /* Espaciado */
+      --space-1:  8px;
+      --space-2:  16px;
+      --space-3:  24px;
+      --space-4:  32px;
+      --space-5:  40px;
+      --space-6:  48px;
+      --space-8:  64px;
+      --space-12: 96px;
+      --space-16: 128px;
+
+      /* Layout */
+      --max-width:          1120px;
+      --padding-x-mobile:   16px;
+      --padding-x-desktop:  24px;
+      --border-radius-sm:   8px;
+      --border-radius-md:   16px;
+      --border-radius-lg:   24px;
+      --border-radius-full: 9999px;
+
+      /* Sombras */
+      --shadow-card: 0 4px 24px rgba(15, 32, 68, 0.08);
+      --shadow-btn:  0 2px 12px rgba(29, 78, 216, 0.25);
+      --shadow-foto: 0 8px 40px rgba(15, 32, 68, 0.18);
+    }
+
+    /* ============================================================
+       RESET Y BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 108px; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: var(--text-body);
+      color: var(--gris-body);
+      background-color: var(--blanco-nieve);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      line-height: 1.15;
+      color: var(--carbon);
+    }
+
+    h1 { font-size: var(--text-h1); font-weight: 800; }
+    h2 { font-size: var(--text-h2); font-weight: 700; }
+    h3 { font-size: var(--text-h3); font-weight: 700; }
+
+    /* ============================================================
+       BANNER DE DESARROLLO
+    ============================================================ */
+    .dev-banner {
+      background: #1a1a1a;
+      color: #FFD700;
+      font-family: monospace;
+      font-size: 0.8rem;
+      padding: 10px var(--padding-x-mobile);
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+    }
+
+    .placeholder {
+      color: var(--rojo-error);
+      font-weight: 600;
+      background: rgba(239, 68, 68, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-style: italic;
+    }
+
+    /* ============================================================
+       CONTENEDOR
+    ============================================================ */
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--padding-x-mobile);
+    }
+
+    @media (min-width: 768px) {
+      .container { padding: 0 var(--padding-x-desktop); }
+    }
+
+    /* ============================================================
+       LÍNEA KINÉTICA SVG
+    ============================================================ */
+    .kinetic-line {
+      display: block;
+      width: 80px;
+      height: 12px;
+    }
+
+    .kinetic-line--sm { width: 56px; }
+    .kinetic-line--lg { width: 100%; height: 16px; }
+    .kinetic-line--centered { margin: 0 auto; }
+    .kinetic-line--card { width: 40px; margin: var(--space-3) auto 0; }
+
+    /* ============================================================
+       BOTONES
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 14px 28px;
+      border-radius: var(--border-radius-full);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn:focus-visible {
+      outline: 3px solid var(--cian-kinetico);
+      outline-offset: 3px;
+    }
+
+    .btn-whatsapp {
+      background: var(--ambar-cta);
+      color: var(--carbon);
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--ambar-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    }
+
+    .btn-primary {
+      background: var(--azul-primario);
+      color: var(--blanco-puro);
+      box-shadow: var(--shadow-btn);
+    }
+
+    .btn-primary:hover {
+      background: var(--azul-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(29, 78, 216, 0.35);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--blanco-puro);
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blanco-puro);
+      background: rgba(255,255,255,0.08);
+      transform: translateY(-2px);
+    }
+
+    .btn-full { width: 100%; }
+
+    /* ============================================================
+       CHIPS / EYEBROW
+    ============================================================ */
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: var(--text-eyebrow);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gris-placeholder);
+    }
+
+    .eyebrow--light { color: rgba(255,255,255,0.65); }
+    .eyebrow--cyan  { color: var(--cian-kinetico); }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-1);
+    }
+
+    .chip {
+      font-family: var(--font-body);
+      font-size: var(--text-eyebrow);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 14px;
+      border-radius: var(--border-radius-full);
+      background: rgba(29, 78, 216, 0.35);
+      color: var(--blanco-puro);
+      border: 1px solid rgba(29, 78, 216, 0.6);
+    }
+
+    /* ============================================================
+       ANIMACIONES SCROLL
+    ============================================================ */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--blanco-nieve);
+      border-bottom: 1px solid var(--gris-borde);
+      box-shadow: 0 1px 8px rgba(15,32,68,0.06);
+      height: 64px;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--padding-x-mobile);
+    }
+
+    @media (min-width: 768px) {
+      .nav__inner { padding: 0 var(--padding-x-desktop); }
+    }
+
+    .nav__logo {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--carbon);
+      line-height: 1.2;
+    }
+
+    .nav__logo span {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--gris-placeholder);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .nav .btn-whatsapp {
+      padding: 10px 20px;
+      min-height: 40px;
+      font-size: 0.875rem;
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      background-color: var(--azul-noche);
+      padding: clamp(48px, 8vw, 96px) 0 clamp(40px, 7vw, 80px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-6);
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .hero__inner {
+        grid-template-columns: 55fr 45fr;
+        gap: var(--space-8);
+      }
+    }
+
+    .hero__content { order: 2; }
+
+    @media (min-width: 900px) {
+      .hero__content { order: 1; }
+    }
+
+    .hero__photo-wrap { order: 1; display: flex; justify-content: center; }
+
+    @media (min-width: 900px) {
+      .hero__photo-wrap { order: 2; justify-content: flex-end; }
+    }
+
+    .hero__chips { margin-bottom: var(--space-3); }
+
+    .hero__kinetic { margin: var(--space-3) 0; }
+
+    @media (max-width: 899px) {
+      .hero__kinetic { margin: var(--space-3) auto; }
+    }
+
+    .hero h1 {
+      color: var(--blanco-puro);
+      font-weight: 800;
+      margin-bottom: var(--space-3);
+    }
+
+    .hero__subtitle {
+      font-size: var(--text-subtitle);
+      color: rgba(255,255,255,0.82);
+      line-height: 1.6;
+      margin-bottom: var(--space-5);
+      max-width: 520px;
+    }
+
+    @media (max-width: 899px) {
+      .hero h1, .hero__subtitle { text-align: center; }
+      .hero__chips { justify-content: center; }
+    }
+
+    .hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    @media (max-width: 899px) {
+      .hero__ctas { justify-content: center; }
+      .hero__ctas .btn { width: 100%; max-width: 360px; }
+    }
+
+    .hero__photo {
+      width: clamp(200px, 40vw, 380px);
+      height: clamp(200px, 40vw, 380px);
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--azul-primario);
+      box-shadow: var(--shadow-foto);
+    }
+
+    /* ============================================================
+       TRUST BAR
+    ============================================================ */
+    .trust-bar {
+      background: var(--blanco-nieve);
+      border-bottom: 1px solid var(--gris-borde);
+      padding: var(--space-5) 0;
+    }
+
+    .trust-bar__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-3);
+      text-align: center;
+    }
+
+    .trust-item__icon {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-1);
+    }
+
+    .trust-item__title {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--carbon);
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .trust-item__sub {
+      font-size: var(--text-caption);
+      color: var(--gris-placeholder);
+      line-height: 1.3;
+    }
+
+    .trust-bar__caption {
+      text-align: center;
+      margin-top: var(--space-3);
+      font-size: var(--text-caption);
+      color: var(--gris-placeholder);
+      font-style: italic;
+    }
+
+    /* ============================================================
+       PROBLEMA
+    ============================================================ */
+    .problema {
+      background: var(--gris-azulado);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .section-eyebrow {
+      text-align: center;
+      margin-bottom: var(--space-2);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: clamp(32px, 5vw, 56px);
+    }
+
+    .problema__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-3);
+      margin-bottom: clamp(32px, 5vw, 48px);
+    }
+
+    @media (min-width: 768px) {
+      .problema__grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .problema-card {
+      background: var(--blanco-nieve);
+      border-radius: var(--border-radius-lg);
+      padding: var(--space-5) var(--space-4);
+      border: 1px solid var(--gris-borde);
+      box-shadow: var(--shadow-card);
+      text-align: center;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .problema-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(15,32,68,0.12);
+    }
+
+    .problema-card__icon { font-size: 2rem; margin-bottom: var(--space-2); }
+
+    .problema-card p {
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      line-height: 1.65;
+    }
+
+    .problema__cierre {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: var(--text-body);
+      line-height: 1.7;
+      color: var(--carbon);
+    }
+
+    /* ============================================================
+       MECANISMO ÚNICO
+    ============================================================ */
+    .mecanismo {
+      background: var(--azul-noche);
+      padding: clamp(48px, 8vw, 96px) 0;
+      position: relative;
+    }
+
+    .mecanismo__kinetic-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .mecanismo h2 { color: var(--blanco-puro); }
+
+    .mecanismo__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(32px, 5vw, 56px);
+      margin-top: clamp(32px, 5vw, 48px);
+      align-items: start;
+    }
+
+    @media (min-width: 768px) {
+      .mecanismo__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .mecanismo__text {
+      font-size: var(--text-body);
+      color: rgba(255,255,255,0.85);
+      line-height: 1.75;
+    }
+
+    .mecanismo__comparativa {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3);
+    }
+
+    .comp-col {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--border-radius-md);
+      padding: var(--space-3);
+    }
+
+    .comp-col--con { border-color: rgba(16,185,129,0.4); background: rgba(16,185,129,0.07); }
+
+    .comp-col__title {
+      font-family: var(--font-body);
+      font-size: var(--text-eyebrow);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-2);
+      padding-bottom: var(--space-1);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .comp-col--sin .comp-col__title { color: var(--gris-placeholder); }
+    .comp-col--con .comp-col__title { color: var(--verde-confirmacion); }
+
+    .comp-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+    .comp-list li {
+      font-size: var(--text-body-sm);
+      color: rgba(255,255,255,0.75);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .comp-list li::before { flex-shrink: 0; margin-top: 1px; }
+    .comp-col--sin .comp-list li::before { content: "✕"; color: var(--gris-placeholder); }
+    .comp-col--con .comp-list li::before { content: "✓"; color: var(--verde-confirmacion); }
+
+    /* ============================================================
+       PARA QUIÉN ES
+    ============================================================ */
+    .para-quien {
+      background: var(--blanco-nieve);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .avatar-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      margin-top: clamp(32px, 5vw, 48px);
+    }
+
+    @media (min-width: 700px) {
+      .avatar-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .avatar-card {
+      border-radius: var(--border-radius-lg);
+      padding: clamp(28px, 4vw, 40px);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .avatar-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(15,32,68,0.15);
+    }
+
+    .avatar-card--a {
+      background: var(--gris-azulado);
+      border: 1px solid var(--gris-borde);
+      color: var(--carbon);
+    }
+
+    .avatar-card--b {
+      background: var(--azul-primario);
+      color: var(--blanco-puro);
+    }
+
+    .avatar-card__icon { font-size: 2.5rem; margin-bottom: var(--space-2); }
+
+    .avatar-card--b h3 { color: var(--blanco-puro); }
+
+    .avatar-card__list {
+      list-style: none;
+      margin-top: var(--space-3);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .avatar-card__list li {
+      font-size: var(--text-body-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.45;
+    }
+
+    .avatar-card--a .avatar-card__list li::before { content: "→"; color: var(--azul-primario); flex-shrink: 0; }
+    .avatar-card--b .avatar-card__list li::before { content: "→"; color: rgba(255,255,255,0.7); flex-shrink: 0; }
+
+    /* ============================================================
+       SERVICIOS
+    ============================================================ */
+    .servicios {
+      background: var(--gris-azulado);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .servicios__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      margin-top: clamp(32px, 5vw, 48px);
+    }
+
+    @media (min-width: 700px) {
+      .servicios__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .servicio-card {
+      border-radius: var(--border-radius-lg);
+      padding: clamp(28px, 4vw, 40px);
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .servicio-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(15,32,68,0.15);
+    }
+
+    .servicio-card--1 {
+      background: var(--blanco-nieve);
+      border: 1px solid var(--gris-borde);
+      color: var(--carbon);
+      box-shadow: var(--shadow-card);
+    }
+
+    .servicio-card--2 {
+      background: var(--azul-noche);
+      color: var(--blanco-puro);
+    }
+
+    .servicio-badge {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: var(--text-eyebrow);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 14px;
+      border-radius: var(--border-radius-full);
+      margin-bottom: var(--space-3);
+    }
+
+    .servicio-card--1 .servicio-badge {
+      background: var(--gris-azulado);
+      color: var(--azul-primario);
+      border: 1px solid rgba(29,78,216,0.2);
+    }
+
+    .servicio-card--2 .servicio-badge {
+      background: rgba(29,78,216,0.4);
+      color: var(--blanco-puro);
+      border: 1px solid rgba(29,78,216,0.6);
+    }
+
+    .servicio-card--2 h3 { color: var(--blanco-puro); }
+
+    .servicio-card__desc {
+      font-size: var(--text-body-sm);
+      line-height: 1.65;
+      margin: var(--space-2) 0 var(--space-3);
+    }
+
+    .servicio-card--1 .servicio-card__desc { color: var(--gris-body); }
+    .servicio-card--2 .servicio-card__desc { color: rgba(255,255,255,0.8); }
+
+    .servicio-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: var(--space-4);
+    }
+
+    .servicio-list li {
+      font-size: var(--text-body-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .servicio-card--1 .servicio-list li { color: var(--gris-body); }
+    .servicio-card--2 .servicio-list li { color: rgba(255,255,255,0.82); }
+    .servicio-card--1 .servicio-list li::before { content: "✓"; color: var(--verde-confirmacion); flex-shrink: 0; }
+    .servicio-card--2 .servicio-list li::before { content: "✓"; color: var(--verde-confirmacion); flex-shrink: 0; }
+
+    .servicio-precio {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: var(--space-3);
+    }
+
+    .servicio-card--1 .servicio-precio { color: var(--azul-primario); }
+    .servicio-card--2 .servicio-precio { color: var(--blanco-puro); }
+
+    /* ============================================================
+       PROCESO
+    ============================================================ */
+    .proceso {
+      background: var(--blanco-nieve);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .proceso__steps {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      margin-top: clamp(32px, 5vw, 48px);
+      position: relative;
+    }
+
+    @media (min-width: 768px) {
+      .proceso__steps {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-3);
+      }
+    }
+
+    .step {
+      text-align: center;
+      padding: clamp(24px, 3vw, 32px);
+      background: var(--gris-azulado);
+      border-radius: var(--border-radius-lg);
+      border: 1px solid var(--gris-borde);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+
+    .step:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(15,32,68,0.1);
+    }
+
+    .step__num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--azul-primario);
+      color: var(--blanco-puro);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-3);
+    }
+
+    .step__icon { font-size: 1.75rem; margin-bottom: var(--space-2); }
+
+    .step h3 { margin-bottom: var(--space-2); }
+
+    .step p {
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      line-height: 1.6;
+    }
+
+    /* ============================================================
+       AUTORIDAD
+    ============================================================ */
+    .autoridad {
+      background: var(--gris-azulado);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .autoridad__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(32px, 5vw, 56px);
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .autoridad__inner { grid-template-columns: 40fr 60fr; }
+    }
+
+    .autoridad__photo {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-foto);
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .autoridad__photo { margin: 0; }
+    }
+
+    .autoridad__text .eyebrow { margin-bottom: var(--space-2); }
+
+    .autoridad__text h2 { margin-bottom: var(--space-3); }
+
+    .autoridad__text p {
+      font-size: var(--text-body);
+      line-height: 1.75;
+      margin-bottom: var(--space-3);
+    }
+
+    .cred-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: var(--space-4);
+    }
+
+    .cred-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+    }
+
+    .cred-list li::before {
+      content: "◆";
+      color: var(--azul-primario);
+      flex-shrink: 0;
+      font-size: 0.6rem;
+      margin-top: 5px;
+    }
+
+    .redes-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+      color: var(--azul-primario);
+      transition: color 0.2s;
+    }
+
+    .redes-link:hover { color: var(--azul-hover); text-decoration: underline; }
+
+    /* ============================================================
+       BENEFICIOS
+    ============================================================ */
+    .beneficios {
+      background: var(--blanco-nieve);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .beneficios__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      margin-top: clamp(32px, 5vw, 48px);
+    }
+
+    @media (min-width: 700px) {
+      .beneficios__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .beneficio-card {
+      padding: clamp(24px, 3vw, 32px);
+      border-radius: var(--border-radius-lg);
+      background: var(--gris-azulado);
+      border: 1px solid var(--gris-borde);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .beneficio-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(15,32,68,0.1);
+    }
+
+    .beneficio-card__icon {
+      font-size: 2.25rem;
+      color: var(--azul-primario);
+      margin-bottom: var(--space-2);
+    }
+
+    .beneficio-card h3 { margin-bottom: var(--space-2); }
+
+    .beneficio-card p {
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      line-height: 1.65;
+    }
+
+    /* ============================================================
+       TESTIMONIOS
+    ============================================================ */
+    .testimonios {
+      background: var(--azul-noche);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .testimonios h2 { color: var(--blanco-puro); text-align: center; margin-bottom: clamp(32px, 5vw, 48px); }
+
+    .testimonios__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+
+    @media (min-width: 768px) {
+      .testimonios__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .testimonio-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--border-radius-lg);
+      padding: clamp(24px, 3vw, 36px);
+      transition: transform 0.25s ease;
+    }
+
+    .testimonio-card:hover { transform: translateY(-3px); }
+
+    .testimonio-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: var(--space-2);
+      font-size: 1.1rem;
+    }
+
+    .star { color: var(--ambar-cta); }
+
+    .testimonio-card__label {
+      font-size: var(--text-eyebrow);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--cian-kinetico);
+      margin-bottom: 6px;
+    }
+
+    .testimonio-card__text {
+      font-size: var(--text-body-sm);
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
+      margin-bottom: var(--space-3);
+    }
+
+    .testimonio-card__author {
+      font-size: var(--text-caption);
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+    }
+
+    .testimonios__legal {
+      text-align: center;
+      margin-top: var(--space-5);
+      font-size: var(--text-caption);
+      color: rgba(255,255,255,0.45);
+      font-style: italic;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ============================================================
+       LEAD MAGNET
+    ============================================================ */
+    .lead-magnet {
+      background: var(--gris-azulado);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .lead-magnet__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(32px, 5vw, 56px);
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .lead-magnet__inner { grid-template-columns: 55fr 45fr; }
+    }
+
+    .lead-magnet__badge {
+      display: inline-block;
+      background: var(--azul-primario);
+      color: var(--blanco-puro);
+      font-family: var(--font-body);
+      font-size: var(--text-eyebrow);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 6px 16px;
+      border-radius: var(--border-radius-full);
+      margin-bottom: var(--space-3);
+    }
+
+    .lead-magnet__content h2 { margin-bottom: var(--space-3); }
+
+    .lead-magnet__bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: var(--space-3);
+    }
+
+    .lead-magnet__bullets li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      line-height: 1.5;
+    }
+
+    .lead-magnet__bullets li::before {
+      content: "✓";
+      color: var(--verde-confirmacion);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .lead-magnet__form-wrap {
+      background: var(--blanco-nieve);
+      border-radius: var(--border-radius-lg);
+      padding: clamp(24px, 3vw, 40px);
+      box-shadow: var(--shadow-card);
+    }
+
+    .form-group { margin-bottom: var(--space-3); }
+
+    .form-group label {
+      display: block;
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+      color: var(--carbon);
+      margin-bottom: 6px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--gris-borde);
+      border-radius: var(--border-radius-sm);
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm);
+      color: var(--carbon);
+      background: var(--blanco-puro);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      min-height: 48px;
+    }
+
+    .form-group input::placeholder { color: var(--gris-placeholder); }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--azul-primario);
+      box-shadow: 0 0 0 3px rgba(29,78,216,0.15);
+    }
+
+    .form-group input:focus-visible { border-color: var(--azul-primario); }
+
+    .form-microcopy {
+      font-size: var(--text-caption);
+      color: var(--gris-placeholder);
+      text-align: center;
+      margin-top: var(--space-2);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: var(--space-4);
+    }
+
+    .form-success__icon { font-size: 2.5rem; margin-bottom: var(--space-2); }
+
+    .form-success p {
+      font-size: var(--text-body-sm);
+      color: var(--verde-confirmacion);
+      font-weight: 600;
+    }
+
+    /* ============================================================
+       FAQ
+    ============================================================ */
+    .faq {
+      background: var(--blanco-nieve);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .faq__list {
+      max-width: 720px;
+      margin: clamp(32px, 5vw, 48px) auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .faq details {
+      background: var(--gris-azulado);
+      border: 1px solid var(--gris-borde);
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+
+    .faq details[open] {
+      box-shadow: 0 4px 20px rgba(15,32,68,0.08);
+    }
+
+    .faq summary {
+      padding: var(--space-3) var(--space-4);
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+      color: var(--carbon);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-2);
+      min-height: 56px;
+      transition: background 0.2s;
+    }
+
+    .faq summary::-webkit-details-marker { display: none; }
+
+    .faq summary:hover { background: rgba(29,78,216,0.06); }
+
+    .faq summary:focus-visible {
+      outline: 3px solid var(--azul-primario);
+      outline-offset: -3px;
+    }
+
+    .faq__arrow {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--azul-primario);
+      color: var(--blanco-puro);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      transition: transform 0.25s;
+    }
+
+    .faq details[open] .faq__arrow { transform: rotate(45deg); }
+
+    .faq__answer {
+      padding: 0 var(--space-4) var(--space-4);
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      line-height: 1.7;
+      border-top: 1px solid var(--gris-borde);
+    }
+
+    .faq__answer p { margin-top: var(--space-2); }
+
+    .faq__micro-cta {
+      display: inline-block;
+      margin-top: var(--space-2);
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+      color: var(--azul-primario);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* ============================================================
+       CTA FINAL
+    ============================================================ */
+    .cta-final {
+      background: var(--azul-noche);
+      padding: clamp(64px, 9vw, 96px) 0;
+      position: relative;
+    }
+
+    .cta-final__kinetic {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .cta-final__inner {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .cta-final h2 {
+      color: var(--blanco-puro);
+      margin-bottom: var(--space-3);
+    }
+
+    .cta-final__sub {
+      color: rgba(255,255,255,0.8);
+      font-size: var(--text-subtitle);
+      margin-bottom: var(--space-5);
+      line-height: 1.6;
+    }
+
+    .cta-final__btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    @media (min-width: 480px) {
+      .cta-final__btns { flex-direction: row; justify-content: center; flex-wrap: wrap; }
+    }
+
+    .cta-final__micro {
+      margin-top: var(--space-3);
+      font-size: var(--text-caption);
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: var(--carbon);
+      padding: clamp(40px, 6vw, 64px) 0 clamp(24px, 4vw, 40px);
+      color: var(--gris-placeholder);
+    }
+
+    .footer__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-5);
+    }
+
+    @media (min-width: 768px) {
+      .footer__inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    .footer__brand-name {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--blanco-puro);
+      margin-bottom: 4px;
+    }
+
+    .footer__brand-sub {
+      font-size: var(--text-caption);
+      color: var(--gris-placeholder);
+      margin-bottom: var(--space-3);
+    }
+
+    .footer__redes {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer__redes a {
+      font-size: var(--text-body-sm);
+      color: var(--gris-placeholder);
+      transition: color 0.2s;
+    }
+
+    .footer__redes a:hover { color: var(--blanco-puro); }
+
+    .footer__legal-title {
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+      color: var(--blanco-puro);
+      margin-bottom: var(--space-2);
+    }
+
+    .footer__legal p {
+      font-size: var(--text-caption);
+      line-height: 1.65;
+      margin-bottom: var(--space-2);
+    }
+
+    .footer__divider {
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+      margin: var(--space-5) 0 var(--space-3);
+    }
+
+    .footer__copy {
+      font-size: var(--text-caption);
+      text-align: center;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ============================================================
+       STICKY WHATSAPP BAR (mobile)
+    ============================================================ */
+    .sticky-wa {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--ambar-cta);
+      color: var(--carbon);
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.9375rem;
+      padding: 14px var(--padding-x-mobile);
+      text-align: center;
+      border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+      box-shadow: 0 -4px 24px rgba(245,158,11,0.35);
+      text-decoration: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+
+    .sticky-wa:hover { background: var(--ambar-hover); }
+
+    @media (max-width: 899px) {
+      .sticky-wa { display: flex; }
+      body { padding-bottom: 60px; }
+    }
+
+    /* ============================================================
+       UTILITIES
+    ============================================================ */
+    .text-center { text-align: center; }
+    .mt-1 { margin-top: var(--space-1); }
+    .mt-2 { margin-top: var(--space-2); }
+    .mt-3 { margin-top: var(--space-3); }
+    .mt-4 { margin-top: var(--space-4); }
+    .mb-2 { margin-bottom: var(--space-2); }
+    .mb-3 { margin-bottom: var(--space-3); }
+
+    /* ============================================================
+       BARRA DE REDES SOCIALES
+    ============================================================ */
+    .social-bar {
+      background: var(--azul-noche);
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .social-bar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+
+    .social-bar__text {
+      font-size: var(--text-caption);
+      color: rgba(255,255,255,0.45);
+    }
+
+    .social-bar__links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+
+    .social-bar__links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: var(--text-caption);
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.2s;
+    }
+
+    .social-bar__links a:hover { color: var(--cian-kinetico); }
+
+    /* ============================================================
+       BOTÓN EMERGENCIA (FAB)
+    ============================================================ */
+    .emergency-fab {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      z-index: 300;
+      background: #DC2626;
+      color: #fff;
+      border: none;
+      border-radius: var(--border-radius-full);
+      padding: 11px 18px;
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 20px rgba(220,38,38,0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .emergency-fab:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(220,38,38,0.55);
+    }
+
+    @media (max-width: 899px) {
+      .emergency-fab {
+        bottom: 72px;
+        right: 12px;
+        padding: 9px 14px;
+        font-size: 0.8125rem;
+      }
+    }
+
+    /* ============================================================
+       MODAL EMERGENCIA
+    ============================================================ */
+    .emergency-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--padding-x-mobile);
+    }
+
+    .emergency-modal[hidden] { display: none; }
+
+    .emergency-modal__overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.72);
+      backdrop-filter: blur(4px);
+    }
+
+    .emergency-modal__box {
+      position: relative;
+      background: var(--blanco-nieve);
+      border-radius: var(--border-radius-lg);
+      padding: clamp(24px,4vw,40px);
+      max-width: 540px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      box-shadow: 0 20px 60px rgba(15,32,68,0.3);
+      border-top: 4px solid #DC2626;
+    }
+
+    .emergency-modal__close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: var(--gris-azulado);
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--carbon);
+      transition: background 0.2s;
+    }
+
+    .emergency-modal__close:hover { background: var(--gris-borde); }
+
+    .emergency-modal__box h2 {
+      font-size: var(--text-h3);
+      color: #DC2626;
+      margin-bottom: var(--space-2);
+      padding-right: 40px;
+    }
+
+    .emergency-modal__box > p {
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      margin-bottom: var(--space-3);
+      line-height: 1.65;
+    }
+
+    .emergency-symptoms {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: var(--space-4);
+      padding: var(--space-3);
+      background: rgba(220,38,38,0.05);
+      border-radius: var(--border-radius-md);
+      border: 1px solid rgba(220,38,38,0.15);
+    }
+
+    .emergency-symptoms li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: var(--text-body-sm);
+      color: var(--carbon);
+      line-height: 1.4;
+    }
+
+    .emergency-symptoms li::before {
+      content: "⚠";
+      color: #DC2626;
+      flex-shrink: 0;
+      font-size: 0.75rem;
+      margin-top: 2px;
+    }
+
+    .emergency-numbers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-2);
+      margin-bottom: var(--space-3);
+    }
+
+    .emergency-num-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 3px;
+      padding: 14px 8px;
+      border-radius: var(--border-radius-md);
+      color: #fff;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-decoration: none;
+      transition: filter 0.2s, transform 0.15s;
+    }
+
+    .emergency-num-btn:hover { transform: translateY(-1px); filter: brightness(1.1); }
+
+    .emergency-num-btn span {
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.9;
+    }
+
+    .emergency-num-btn--samu { background: #DC2626; }
+    .emergency-num-btn--carab { background: #1D4ED8; }
+    .emergency-num-btn--bomb { background: #EA580C; }
+
+    .emergency-disclaimer {
+      font-size: var(--text-caption);
+      color: var(--gris-placeholder);
+      text-align: center;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       PLANES DE PRECIOS (3 tiers)
+    ============================================================ */
+    .planes {
+      background: var(--gris-azulado);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .planes__intro {
+      text-align: center;
+      max-width: 640px;
+      margin: var(--space-3) auto clamp(32px, 5vw, 48px);
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      line-height: 1.65;
+    }
+
+    .planes__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+    }
+
+    @media (min-width: 768px) {
+      .planes__grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .plan-card {
+      border-radius: var(--border-radius-lg);
+      padding: clamp(24px, 3vw, 36px);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 2px solid transparent;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(15,32,68,0.16);
+    }
+
+    .plan-card--individual {
+      background: var(--blanco-nieve);
+      border-color: var(--gris-borde);
+      box-shadow: var(--shadow-card);
+    }
+
+    .plan-card--cronico {
+      background: var(--azul-primario);
+      border-color: var(--azul-primario);
+      color: var(--blanco-puro);
+      box-shadow: 0 8px 40px rgba(29,78,216,0.3);
+    }
+
+    .plan-card--deportivo {
+      background: var(--azul-noche);
+      border-color: rgba(0,194,255,0.3);
+      color: var(--blanco-puro);
+    }
+
+    .plan-card--recomendado::before {
+      content: "⭐ MÁS ELEGIDO";
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--ambar-cta);
+      color: var(--carbon);
+      font-family: var(--font-body);
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 16px;
+      border-radius: var(--border-radius-full);
+      white-space: nowrap;
+    }
+
+    .plan-badge {
+      display: inline-block;
+      font-size: var(--text-eyebrow);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 14px;
+      border-radius: var(--border-radius-full);
+      margin-bottom: var(--space-3);
+    }
+
+    .plan-card--individual .plan-badge {
+      background: var(--gris-azulado);
+      color: var(--gris-body);
+      border: 1px solid var(--gris-borde);
+    }
+
+    .plan-card--cronico .plan-badge {
+      background: rgba(255,255,255,0.18);
+      color: var(--blanco-puro);
+    }
+
+    .plan-card--deportivo .plan-badge {
+      background: rgba(0,194,255,0.15);
+      color: var(--cian-kinetico);
+      border: 1px solid rgba(0,194,255,0.3);
+    }
+
+    .plan-card h3 {
+      font-size: var(--text-h3);
+      margin-bottom: var(--space-1);
+    }
+
+    .plan-card--individual h3 { color: var(--carbon); }
+    .plan-card--cronico h3, .plan-card--deportivo h3 { color: var(--blanco-puro); }
+
+    .plan-card__desc {
+      font-size: var(--text-body-sm);
+      line-height: 1.6;
+      margin-bottom: var(--space-2);
+    }
+
+    .plan-card--individual .plan-card__desc { color: var(--gris-body); }
+    .plan-card--cronico .plan-card__desc, .plan-card--deportivo .plan-card__desc { color: rgba(255,255,255,0.82); }
+
+    .plan-price {
+      font-family: var(--font-heading);
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    .plan-card--individual .plan-price { color: var(--azul-primario); }
+    .plan-card--cronico .plan-price, .plan-card--deportivo .plan-price { color: var(--blanco-puro); }
+
+    .plan-price__note {
+      font-family: var(--font-body);
+      font-size: var(--text-caption);
+      font-weight: 400;
+      opacity: 0.65;
+    }
+
+    .plan-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: var(--space-3) 0 var(--space-4);
+      flex-grow: 1;
+    }
+
+    .plan-list li {
+      font-size: var(--text-body-sm);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      line-height: 1.4;
+    }
+
+    .plan-card--individual .plan-list li { color: var(--gris-body); }
+    .plan-card--cronico .plan-list li, .plan-card--deportivo .plan-list li { color: rgba(255,255,255,0.85); }
+
+    .plan-card--individual .plan-list li::before { content: "✓"; color: var(--verde-confirmacion); flex-shrink: 0; }
+    .plan-card--cronico .plan-list li::before { content: "✓"; color: rgba(255,255,255,0.75); flex-shrink: 0; }
+    .plan-card--deportivo .plan-list li::before { content: "✓"; color: var(--cian-kinetico); flex-shrink: 0; }
+
+    .plan-nota {
+      font-size: var(--text-caption);
+      padding: 10px 14px;
+      border-radius: var(--border-radius-sm);
+      margin-bottom: var(--space-3);
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    .plan-card--individual .plan-nota {
+      background: rgba(245,158,11,0.08);
+      border: 1px solid rgba(245,158,11,0.2);
+      color: var(--gris-body);
+    }
+
+    /* ============================================================
+       SECCIÓN NOTICIAS / ACTUALIZACIÓN MÉDICA
+    ============================================================ */
+    .noticias {
+      background: var(--blanco-nieve);
+      padding: clamp(48px, 7vw, 80px) 0;
+    }
+
+    .noticias__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
+      margin-top: clamp(32px, 5vw, 48px);
+    }
+
+    @media (min-width: 768px) {
+      .noticias__grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .noticia-card {
+      background: var(--gris-azulado);
+      border: 1px solid var(--gris-borde);
+      border-radius: var(--border-radius-lg);
+      padding: clamp(20px, 3vw, 32px);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .noticia-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(15,32,68,0.12);
+    }
+
+    .noticia-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--azul-primario), var(--cian-kinetico));
+    }
+
+    .noticia-tag {
+      display: inline-block;
+      font-size: var(--text-eyebrow);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--azul-primario);
+      background: rgba(29,78,216,0.08);
+      padding: 4px 12px;
+      border-radius: var(--border-radius-full);
+      align-self: flex-start;
+    }
+
+    .noticia-card h3 {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.3;
+      color: var(--carbon);
+    }
+
+    .noticia-card p {
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      line-height: 1.65;
+      flex-grow: 1;
+    }
+
+    .noticia-source {
+      font-size: var(--text-caption);
+      color: var(--gris-placeholder);
+      font-style: italic;
+      border-top: 1px solid var(--gris-borde);
+      padding-top: var(--space-2);
+      margin-top: auto;
+    }
+
+    .noticias__disclaimer {
+      text-align: center;
+      margin-top: var(--space-4);
+      font-size: var(--text-caption);
+      color: var(--gris-placeholder);
+      font-style: italic;
+    }
+
+    /* ============================================================
+       SELECTOR DE PERFIL (planes)
+    ============================================================ */
+    .planes__selector {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-2);
+      flex-wrap: wrap;
+      margin-bottom: clamp(28px, 4vw, 40px);
+    }
+
+    .planes__path-btn {
+      padding: 10px 22px;
+      border-radius: var(--border-radius-full);
+      border: 2px solid var(--gris-borde);
+      background: var(--blanco-nieve);
+      color: var(--gris-body);
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, color 0.2s;
+    }
+
+    .planes__path-btn:hover {
+      border-color: var(--azul-primario);
+      color: var(--azul-primario);
+    }
+
+    .planes__path-btn--active {
+      background: var(--azul-primario);
+      border-color: var(--azul-primario);
+      color: var(--blanco-puro);
+    }
+
+    .planes__path-btn--active:hover {
+      background: var(--azul-hover);
+      border-color: var(--azul-hover);
+      color: var(--blanco-puro);
+    }
+
+    .plan-card.plan-hidden {
+      display: none;
+    }
+
+    /* Noticia-source como link */
+    a.noticia-source {
+      color: var(--azul-primario);
+      font-style: normal;
+      font-weight: 500;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+
+    a.noticia-source:hover {
+      color: var(--azul-hover);
+      text-decoration: underline;
+    }
+
+    /* ============================================================
+       MODAL PRE-CONSULTA (Fase 2)
+    ============================================================ */
+    .pc-modal__box {
+      max-width: 600px;
+      border-top-color: var(--azul-primario);
+    }
+
+    /* Indicador de pasos */
+    .pc-steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-4);
+      gap: 0;
+    }
+
+    .pc-dot {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 2px solid var(--gris-borde);
+      background: var(--gris-azulado);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--gris-placeholder);
+      flex-shrink: 0;
+      transition: background 0.25s, border-color 0.25s, color 0.25s;
+    }
+
+    .pc-dot--active {
+      background: var(--azul-primario);
+      border-color: var(--azul-primario);
+      color: var(--blanco-puro);
+    }
+
+    .pc-dot--done {
+      background: var(--verde-confirmacion);
+      border-color: var(--verde-confirmacion);
+      color: var(--blanco-puro);
+    }
+
+    .pc-line {
+      flex: 1;
+      max-width: 72px;
+      height: 2px;
+      background: var(--gris-borde);
+      transition: background 0.25s;
+    }
+
+    .pc-line--done { background: var(--verde-confirmacion); }
+
+    /* Pasos (show/hide) */
+    .pc-step { }
+    .pc-step--hidden { display: none; }
+
+    .pc-step > h3 {
+      font-size: var(--text-h3);
+      color: var(--carbon);
+      margin-bottom: 6px;
+    }
+
+    .pc-step > p {
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      line-height: 1.6;
+      margin-bottom: var(--space-3);
+    }
+
+    /* Cards de selección de perfil */
+    .pc-profile-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+      margin-bottom: var(--space-4);
+    }
+
+    @media (min-width: 440px) {
+      .pc-profile-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .pc-profile-card {
+      border: 2px solid var(--gris-borde);
+      border-radius: var(--border-radius-md);
+      padding: var(--space-3) var(--space-2);
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+      background: var(--blanco-puro);
+      user-select: none;
+    }
+
+    .pc-profile-card:hover {
+      border-color: var(--azul-primario);
+      background: var(--gris-azulado);
+    }
+
+    .pc-profile-card--selected {
+      border-color: var(--azul-primario);
+      background: rgba(29,78,216,0.06);
+      box-shadow: 0 0 0 2px rgba(29,78,216,0.15);
+    }
+
+    .pc-profile-icon { font-size: 2rem; margin-bottom: 6px; }
+
+    .pc-profile-title {
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm);
+      font-weight: 700;
+      color: var(--carbon);
+      line-height: 1.25;
+    }
+
+    .pc-profile-desc {
+      font-size: var(--text-caption);
+      color: var(--gris-placeholder);
+      margin-top: 3px;
+      line-height: 1.35;
+    }
+
+    /* Campos de formulario */
+    .pc-field { margin-bottom: var(--space-3); }
+
+    .pc-field label {
+      display: block;
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+      color: var(--carbon);
+      margin-bottom: 6px;
+    }
+
+    .pc-field input,
+    .pc-field textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--gris-borde);
+      border-radius: var(--border-radius-sm);
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm);
+      color: var(--carbon);
+      background: var(--blanco-puro);
+      min-height: 48px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .pc-field textarea { min-height: 100px; resize: vertical; }
+
+    .pc-field input:focus,
+    .pc-field textarea:focus {
+      outline: none;
+      border-color: var(--azul-primario);
+      box-shadow: 0 0 0 3px rgba(29,78,216,0.12);
+    }
+
+    .pc-field input.pc-error { border-color: var(--rojo-error); }
+
+    /* Checkboxes condiciones */
+    .pc-checks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .pc-check-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      cursor: pointer;
+      line-height: 1.3;
+    }
+
+    .pc-check-label input[type="checkbox"] {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      accent-color: var(--azul-primario);
+      cursor: pointer;
+    }
+
+    /* Navegación entre pasos */
+    .pc-nav {
+      display: flex;
+      gap: var(--space-2);
+      margin-top: var(--space-4);
+    }
+
+    .pc-nav .btn-outline {
+      color: var(--gris-body);
+      border-color: var(--gris-borde);
+    }
+
+    /* Pantalla de éxito */
+    .pc-success {
+      text-align: center;
+      padding: var(--space-3) 0 var(--space-2);
+    }
+
+    .pc-success__icon { font-size: 2.75rem; margin-bottom: var(--space-2); }
+
+    .pc-success h3 {
+      font-size: var(--text-h3);
+      color: var(--verde-confirmacion);
+      margin-bottom: var(--space-2);
+    }
+
+    .pc-success p {
+      font-size: var(--text-body-sm);
+      color: var(--gris-body);
+      line-height: 1.65;
+      margin-bottom: var(--space-4);
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- BARRA REDES SOCIALES -->
+<div class="social-bar" aria-label="Redes sociales del Dr. Gerson Piña">
+  <div class="container">
+    <div class="social-bar__inner">
+      <span class="social-bar__text">Sígueme en redes:</span>
+      <div class="social-bar__links">
+        <a href="https://www.instagram.com/drgersonpina/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @drgersonpina">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          @drgersonpina
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube — próximamente">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.96C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg>
+          YouTube
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok — próximamente">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.94a8.15 8.15 0 004.77 1.53V7.03a4.85 4.85 0 01-1-.34z"/></svg>
+          TikTok
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BANNER DESARROLLO -->
+<div class="dev-banner">
+  🔧 MODO DESARROLLO — Pendientes: <strong>① URL Reservo.cl para agendar</strong> · <strong>② Confirmar precios CLP</strong> · <strong>③ URLs YouTube / TikTok</strong> · <strong>④ Testimonios reales con consentimiento</strong>
+</div>
+
+<!-- ============================================================
+     NAV
+============================================================ -->
+<nav class="nav" role="navigation" aria-label="Navegación principal">
+  <div class="nav__inner">
+    <div class="nav__logo">
+      Dr. Gerson Piña
+      <span>Medicina Deportiva · Chile</span>
+    </div>
+    <!-- Booking URL: reemplazar con URL de Reservo.cl cuando esté disponible -->
+    <a href="https://wa.me/56964573590"
+       class="btn btn-whatsapp"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Agendar consulta">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span class="nav-wa-text">Agendar</span>
+    </a>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+============================================================ -->
+<section class="hero" id="inicio" aria-labelledby="hero-h1">
+  <div class="container">
+    <div class="hero__inner">
+
+      <!-- Columna contenido -->
+      <div class="hero__content fade-in-up">
+        <div class="hero__chips chips" aria-label="Especialidades">
+          <span class="chip">Médico Deportivo</span>
+          <span class="chip">Paciente Crónico</span>
+          <span class="chip">100% Online · Chile</span>
+        </div>
+
+        <!-- Línea kinética bajo chips -->
+        <div class="hero__kinetic" aria-hidden="true">
+          <svg class="kinetic-line" viewBox="0 0 80 12" xmlns="http://www.w3.org/2000/svg" role="presentation">
+            <path d="M 0 9 Q 40 1 80 9" stroke="#00C2FF" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <h1 id="hero-h1">
+          Tu médico te dijo que hagas ejercicio. Pero nadie te explicó cómo.
+        </h1>
+
+        <p class="hero__subtitle">
+          Evaluación e inicio de ejercicio seguro para personas con HTA, diabetes, colesterol y obesidad — 100% online desde Chile.
+        </p>
+
+        <div class="hero__ctas">
+          <!-- PENDIENTE: Número de WhatsApp -->
+          <a href="https://wa.me/56964573590"
+             class="btn btn-whatsapp"
+             target="_blank"
+             rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L0 24l6.332-1.658A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.86 0-3.607-.484-5.127-1.333l-.366-.214-3.752.982.998-3.648-.239-.376A9.947 9.947 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
+            </svg>
+            Agendar mi consulta
+          </a>
+          <a href="#proceso" class="btn btn-outline">¿Cómo funciona?</a>
+        </div>
+      </div>
+
+      <!-- Columna foto -->
+      <div class="hero__photo-wrap fade-in-up" style="transition-delay:0.15s">
+        <img
+          src="assets/gerson-perfil.jpg"
+          alt="Dr. Gerson Piña, médico deportivo online en Chile, Diplomado en Medicina Deportiva — prescripción de ejercicio segura para pacientes con hipertensión, diabetes y obesidad"
+          class="hero__photo"
+          width="380"
+          height="380"
+          loading="eager"
+        >
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST BAR
+============================================================ -->
+<section class="trust-bar" aria-label="Credenciales">
+  <div class="container">
+    <div class="trust-bar__grid fade-in-up">
+      <div class="trust-item">
+        <div class="trust-item__icon" aria-hidden="true">🩺</div>
+        <p class="trust-item__title">Médico con Diplomado en Medicina Deportiva</p>
+        <p class="trust-item__sub">HTA · DM2 · Dislipidemia · Obesidad</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item__icon" aria-hidden="true">🏅</div>
+        <p class="trust-item__title">Ex atleta de alto rendimiento</p>
+        <p class="trust-item__sub">Natación · Wushu · Ultimate Frisbee</p>
+      </div>
+      <div class="trust-item">
+        <div class="trust-item__icon" aria-hidden="true">💻</div>
+        <p class="trust-item__title">100% Online desde Chile</p>
+        <p class="trust-item__sub">Sin traslados · Sin sala de espera</p>
+      </div>
+    </div>
+    <p class="trust-bar__caption">La misma evaluación clínica — sin sala de espera.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROBLEMA
+============================================================ -->
+<section class="problema" id="problema" aria-labelledby="problema-h2">
+  <div class="container">
+    <p class="eyebrow section-eyebrow">¿Esto te suena familiar?</p>
+    <h2 id="problema-h2" class="section-title">Te dieron la indicación.<br>Pero no la respuesta.</h2>
+
+    <div class="problema__grid">
+      <div class="problema-card fade-in-up">
+        <div class="problema-card__icon" aria-hidden="true">❓</div>
+        <p>"Tu médico te dijo que hagas ejercicio. Pero cuando preguntaste cómo, te dijo 'empiece despacio' — y se acabó la consulta."</p>
+        <svg class="kinetic-line kinetic-line--card" viewBox="0 0 40 8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M 0 5 Q 20 1 40 5" stroke="#00C2FF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="problema-card fade-in-up" style="transition-delay:0.1s">
+        <div class="problema-card__icon" aria-hidden="true">💔</div>
+        <p>"Tienes miedo de que algo te pase si te esfuerzas. No sabes si tu presión aguanta el esfuerzo. No sabes qué pasa con tus medicamentos cuando entrenas."</p>
+        <svg class="kinetic-line kinetic-line--card" viewBox="0 0 40 8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M 0 5 Q 20 1 40 5" stroke="#00C2FF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="problema-card fade-in-up" style="transition-delay:0.2s">
+        <div class="problema-card__icon" aria-hidden="true">🔄</div>
+        <p>"Ya intentaste ponerte en movimiento. Con un entrenador, con un plan de internet. No duró — porque nadie entendía tu condición de verdad."</p>
+        <svg class="kinetic-line kinetic-line--card" viewBox="0 0 40 8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M 0 5 Q 20 1 40 5" stroke="#00C2FF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+
+    <p class="problema__cierre fade-in-up">
+      El problema no es que te faltó esfuerzo. Es que nunca tuviste un plan médico diseñado para tu cuerpo, con tu condición, con lo que tomas.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     MECANISMO ÚNICO
+============================================================ -->
+<section class="mecanismo" id="mecanismo" aria-labelledby="mecanismo-h2">
+  <!-- Línea kinética como borde superior -->
+  <div class="mecanismo__kinetic-top" aria-hidden="true">
+    <svg viewBox="0 0 1200 16" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:16px;display:block">
+      <path d="M 0 10 Q 300 2 600 10 Q 900 18 1200 10" stroke="#00C2FF" stroke-width="3" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <p class="eyebrow eyebrow--cyan section-eyebrow mt-4">Por qué esto es diferente</p>
+    <h2 id="mecanismo-h2" class="section-title">
+      Existe una diferencia entre que te digan "haz ejercicio"<br>y que te prescriban exactamente cuál.
+    </h2>
+
+    <div class="mecanismo__grid">
+      <div class="mecanismo__text fade-in-up">
+        <p>
+          El médico deportivo con formación en patología crónica puede hacer algo que ningún otro profesional puede: <strong style="color:var(--blanco-puro)">prescribir el ejercicio como si fuera un medicamento</strong>.
+        </p>
+        <br>
+        <p>
+          No un kinesiólogo — que no maneja tu condición clínica. No un internista — que no sabe de ejercicio. No un entrenador — que no tiene acceso a tu historial médico.
+        </p>
+        <br>
+        <p>
+          El Dr. Piña combina las dos formaciones. Eso le permite decirte exactamente cuál ejercicio es seguro para ti, a qué intensidad, cómo monitorear tu cuerpo durante el proceso — y qué ajustar según cómo responde.
+        </p>
+      </div>
+
+      <div class="mecanismo__comparativa fade-in-up" style="transition-delay:0.15s">
+        <div class="comp-col comp-col--sin">
+          <p class="comp-col__title">Sin el Dr. Piña</p>
+          <ul class="comp-list">
+            <li>"Haga ejercicio"</li>
+            <li>Sin instrucciones reales</li>
+            <li>Sin considerar tus meds</li>
+            <li>Sin monitoreo</li>
+            <li>Sin ajuste del plan</li>
+          </ul>
+        </div>
+        <div class="comp-col comp-col--con">
+          <p class="comp-col__title">Con el Dr. Piña</p>
+          <ul class="comp-list">
+            <li>Plan específico para ti</li>
+            <li>Considera lo que tomas</li>
+            <li>Signos de alarma definidos</li>
+            <li>Seguimiento y ajuste</li>
+            <li>100% online, sin traslado</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PARA QUIÉN ES
+============================================================ -->
+<section class="para-quien" id="para-quien" aria-labelledby="para-quien-h2">
+  <div class="container">
+    <h2 id="para-quien-h2" class="section-title">Esta consulta es para ti si...</h2>
+
+    <div class="avatar-grid">
+      <div class="avatar-card avatar-card--a fade-in-up">
+        <div class="avatar-card__icon" aria-hidden="true">🫀</div>
+        <h3>Tienes una condición crónica y quieres moverte sin miedo</h3>
+        <ul class="avatar-card__list">
+          <li>Tienes HTA, DM2, colesterol u obesidad</li>
+          <li>Tu médico te dijo que hagas ejercicio pero no te explicó cómo</li>
+          <li>No sabes qué pasa con tus medicamentos cuando entrenas</li>
+          <li>Ya lo intentaste antes y no funcionó porque el plan no era para ti</li>
+          <li>Quieres empezar de forma segura, con certeza médica real</li>
+        </ul>
+        <svg class="kinetic-line kinetic-line--card" viewBox="0 0 40 8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M 0 5 Q 20 1 40 5" stroke="#00C2FF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="avatar-card avatar-card--b fade-in-up" style="transition-delay:0.15s">
+        <div class="avatar-card__icon" aria-hidden="true">🏃</div>
+        <h3>Eres deportista y quieres certeza médica</h3>
+        <ul class="avatar-card__list">
+          <li>Entrenas fuerte pero no tienes acompañamiento médico real</li>
+          <li>Quieres saber si tu cuerpo responde bien al entrenamiento</li>
+          <li>Buscas progresar con respaldo médico, no solo con intuición</li>
+          <li>Necesitas una evaluación funcional deportiva de verdad</li>
+          <li>Quieres prevenir lesiones antes de que aparezcan</li>
+        </ul>
+        <svg class="kinetic-line kinetic-line--card" viewBox="0 0 40 8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M 0 5 Q 20 1 40 5" stroke="#00C2FF" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANES Y PRECIOS
+============================================================ -->
+<section class="planes" id="servicios" aria-labelledby="planes-h2">
+  <div class="container">
+    <p class="eyebrow section-eyebrow">Servicios y planes</p>
+    <h2 id="planes-h2" class="section-title">Elige cómo quieres empezar</h2>
+    <p class="planes__intro">
+      La consulta aislada está siempre disponible. Los planes, en cambio, están pensados para quienes quieren avanzar de verdad — con seguimiento, ajuste y acompañamiento médico continuo. <strong>Elige tu perfil y encuentra el plan que te corresponde.</strong>
+    </p>
+
+    <!-- Selector de perfil -->
+    <div class="planes__selector" role="group" aria-label="Filtrar planes por perfil">
+      <button class="planes__path-btn planes__path-btn--active" data-path="all">Todos los planes</button>
+      <button class="planes__path-btn" data-path="cronico">🫀 Soy paciente crónico</button>
+      <button class="planes__path-btn" data-path="deportivo">🏃 Soy deportista</button>
+    </div>
+
+    <div class="planes__grid" id="planes-grid">
+
+      <!-- Plan 1 — Consulta Única (ambos perfiles) -->
+      <div class="plan-card plan-card--individual fade-in-up" data-path="all">
+        <div class="plan-badge">Consulta única</div>
+        <h3>Evaluación de Inicio</h3>
+        <p class="plan-card__desc">Para cualquier perfil. Una sesión completa donde evaluamos tu condición, tus antecedentes y definimos desde dónde partes.</p>
+        <p class="plan-nota">Disponible como punto de entrada para ambos perfiles. Si decides continuar con un plan mensual, el valor se descuenta.</p>
+        <p class="plan-price">
+          $45.000 CLP<br>
+          <span class="plan-price__note">pago único · 60 min · videollamada</span>
+        </p>
+        <ul class="plan-list">
+          <li>Evaluación médica completa por videollamada</li>
+          <li>Revisión de historial, antecedentes y medicamentos</li>
+          <li>Definición de signos de alarma personalizados</li>
+          <li>Plan de inicio detallado al terminar la sesión</li>
+        </ul>
+        <a href="https://wa.me/56964573590"
+           class="btn btn-primary btn-full"
+           target="_blank" rel="noopener noreferrer">
+          Agendar consulta
+        </a>
+      </div>
+
+      <!-- Plan 2 — Crónico (RECOMENDADO) -->
+      <div class="plan-card plan-card--cronico plan-card--recomendado fade-in-up" data-path="cronico" style="transition-delay:0.1s">
+        <div class="plan-badge">Paciente crónico</div>
+        <h3>Plan Salud Activa</h3>
+        <p class="plan-card__desc">Para personas con HTA, DM2, dislipidemia u obesidad que quieren ejercitarse de forma segura con acompañamiento médico mensual.</p>
+        <p class="plan-price">
+          $89.000 CLP<br>
+          <span class="plan-price__note">mensual · renovación mensual</span>
+        </p>
+        <ul class="plan-list">
+          <li>Evaluación inicial completa (60 min)</li>
+          <li>Plan de ejercicio médico personalizado</li>
+          <li>2 controles mensuales de seguimiento</li>
+          <li>Ajuste del plan según respuesta de tu cuerpo</li>
+          <li>Canal directo de consultas entre sesiones</li>
+          <li>Reporte mensual de avance clínico</li>
+        </ul>
+        <a href="https://wa.me/56964573590"
+           class="btn btn-whatsapp btn-full"
+           target="_blank" rel="noopener noreferrer">
+          Quiero este plan
+        </a>
+      </div>
+
+      <!-- Plan 3 — Deportivo -->
+      <div class="plan-card plan-card--deportivo fade-in-up" data-path="deportivo" style="transition-delay:0.2s">
+        <div class="plan-badge">Medicina deportiva</div>
+        <h3>Plan Rendimiento</h3>
+        <p class="plan-card__desc">Para deportistas recreacionales o activos que buscan optimización, prevención de lesiones y prescripción médica del entrenamiento.</p>
+        <p class="plan-price">
+          $129.000 CLP<br>
+          <span class="plan-price__note">mensual · renovación mensual</span>
+        </p>
+        <ul class="plan-list">
+          <li>Evaluación deportiva funcional completa</li>
+          <li>Plan de entrenamiento con prescripción médica</li>
+          <li>Controles quincenales de seguimiento</li>
+          <li>Estrategia de suplementación basada en evidencia</li>
+          <li>Análisis de respuesta al ejercicio y ajuste progresivo</li>
+          <li>Canal directo prioritario · Reporte de rendimiento</li>
+        </ul>
+        <a href="https://wa.me/56964573590"
+           class="btn btn-outline btn-full"
+           target="_blank" rel="noopener noreferrer">
+          Consultar disponibilidad
+        </a>
+      </div>
+
+    </div>
+    <p style="text-align:center;margin-top:var(--space-3);font-size:var(--text-caption);color:var(--gris-placeholder)">Precios referenciales en CLP · IVA incluido · Sujeto a disponibilidad de agenda</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESO
+============================================================ -->
+<section class="proceso" id="proceso" aria-labelledby="proceso-h2">
+  <div class="container">
+    <h2 id="proceso-h2" class="section-title">Así funciona — desde tu casa</h2>
+
+    <div class="proceso__steps">
+      <div class="step fade-in-up">
+        <div class="step__num">1</div>
+        <div class="step__icon" aria-hidden="true">📅</div>
+        <h3>Agenda en línea</h3>
+        <p>Elige tu horario directamente en el sistema de reservas. Confirmación instantánea, sin esperas ni formularios complicados.</p>
+      </div>
+
+      <div class="step fade-in-up" style="transition-delay:0.12s">
+        <div class="step__num">2</div>
+        <div class="step__icon" aria-hidden="true">🖥️</div>
+        <h3>Evaluación médica</h3>
+        <p>Hablamos 60 minutos por videollamada. Revisamos tu historial, tus medicamentos y tus antecedentes. Sin apuro, sin respuestas genéricas.</p>
+      </div>
+
+      <div class="step fade-in-up" style="transition-delay:0.24s">
+        <div class="step__num">3</div>
+        <div class="step__icon" aria-hidden="true">📋</div>
+        <h3>Tu plan + seguimiento</h3>
+        <p>Al terminar recibes tu plan de inicio detallado. Si continúas con el programa, te hago seguimiento y ajusto según cómo responde tu cuerpo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AUTORIDAD
+============================================================ -->
+<section class="autoridad" id="sobre-el-dr" aria-labelledby="autoridad-h2">
+  <div class="container">
+    <div class="autoridad__inner">
+      <div class="fade-in-up">
+        <img
+          src="assets/gerson-perfil.jpg"
+          alt="Dr. Gerson Piña Chirinos — Médico Cirujano, Diplomado en Medicina Deportiva y ex atleta de alto rendimiento. Atención online desde Chile."
+          class="autoridad__photo"
+          width="400"
+          height="500"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="autoridad__text fade-in-up" style="transition-delay:0.15s">
+        <p class="eyebrow">Por qué puedo ayudarte</p>
+        <h2 id="autoridad-h2">Soy el médico que vive lo que prescribe.</h2>
+        <p>
+          Tengo Diplomado en Medicina Deportiva y Fisiología del Ejercicio, 6 años en atención primaria, y una trayectoria deportiva que pocos médicos pueden decir que tienen: fui atleta de alto rendimiento en Natación, Wushu (Artes Marciales Chinas) y Ultimate Frisbee.
+        </p>
+        <p>
+          Hoy sigo entrenando — como Atleta Hybrid en el gimnasio y nadando para envejecer funcionalmente. Eso me da algo que va más allá del libro: entiendo lo que siente el cuerpo cuando entrena, cuando se cansa y cuando necesita ajuste médico real. No te digo cómo hacer ejercicio desde un escritorio — yo también lo hago.
+        </p>
+        <ul class="cred-list">
+          <li>Médico Cirujano</li>
+          <li>Diplomado en Medicina Deportiva y Fisiología del Ejercicio</li>
+          <li>6 años de trayectoria clínica en atención primaria</li>
+          <li>Ex atleta de alto rendimiento: Natación, Wushu y Ultimate Frisbee</li>
+          <li>Atleta Hybrid activo · Natación para el envejecimiento funcional</li>
+          <li>Atención 100% online desde Chile</li>
+        </ul>
+
+        <div class="kinetic-line kinetic-line--sm" style="margin-bottom:var(--space-3)" aria-hidden="true">
+          <svg viewBox="0 0 56 10" xmlns="http://www.w3.org/2000/svg" style="width:56px;height:10px">
+            <path d="M 0 7 Q 28 1 56 7" stroke="#00C2FF" stroke-width="3" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div style="display:flex;gap:var(--space-3);flex-wrap:wrap">
+          <a href="https://www.instagram.com/drgersonpina/" class="redes-link" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+            </svg>
+            @drgersonpina
+          </a>
+          <a href="https://www.linkedin.com/in/dr-gerson-pi%C3%B1a-chirinos-00095540a/" class="redes-link" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BENEFICIOS
+============================================================ -->
+<section class="beneficios" id="beneficios" aria-labelledby="beneficios-h2">
+  <div class="container">
+    <h2 id="beneficios-h2" class="section-title">Lo que cambia cuando tienes un plan médico real</h2>
+
+    <div class="beneficios__grid">
+      <div class="beneficio-card fade-in-up">
+        <div class="beneficio-card__icon" aria-hidden="true">🚶</div>
+        <h3>Empiezo a moverme sin miedo</h3>
+        <p>Tengo un plan diseñado para mi cuerpo y mi condición específica. No un plan genérico de internet que no considera lo que tomo ni lo que tengo.</p>
+      </div>
+
+      <div class="beneficio-card fade-in-up" style="transition-delay:0.1s">
+        <div class="beneficio-card__icon" aria-hidden="true">🧠</div>
+        <h3>Dejo de tener miedo al ejercicio</h3>
+        <p>Sé exactamente qué es seguro para mí, a qué intensidad puedo llegar y qué signos debo monitorear. La incertidumbre desaparece.</p>
+      </div>
+
+      <div class="beneficio-card fade-in-up" style="transition-delay:0.2s">
+        <div class="beneficio-card__icon" aria-hidden="true">🏠</div>
+        <h3>Sin sala de espera ni traslados</h3>
+        <p>Hago mi consulta desde mi casa, en mi horario, sin esperar meses ni desplazarme. La atención médica que necesito llega a mí.</p>
+      </div>
+
+      <div class="beneficio-card fade-in-up" style="transition-delay:0.3s">
+        <div class="beneficio-card__icon" aria-hidden="true">💬</div>
+        <h3>Un médico que me explica el cómo</h3>
+        <p>Por primera vez alguien no solo me da la indicación — me explica cómo seguirla, por qué y qué hacer si algo no sale como esperaba.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIOS
+============================================================ -->
+<!-- Reemplazar con testimonios reales con consentimiento del paciente cuando estén disponibles -->
+<section class="testimonios" id="testimonios" aria-labelledby="testimonios-h2">
+  <div class="container">
+    <h2 id="testimonios-h2">Lo que dicen quienes ya empezaron</h2>
+
+    <div class="testimonios__grid">
+
+      <div class="testimonio-card fade-in-up">
+        <div class="testimonio-stars" aria-label="5 de 5 estrellas">
+          <span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span>
+        </div>
+        <blockquote class="testimonio-card__text">
+          "Cuando el Dr. Piña me explicó que mi medicamento para la presión en realidad me ayudaba a entrenar mejor en lugar de limitarme, fue un cambio de mentalidad total. Siempre pensé que tenía que parar si me costaba respirar. Resulta que estaba confundiendo el esfuerzo normal con una señal de alarma. Eso nunca me lo explicaron en años de controles."
+        </blockquote>
+        <p class="testimonio-card__author">— Marcela R., 54 años · Hipertensión arterial · Santiago</p>
+      </div>
+
+      <div class="testimonio-card fade-in-up" style="transition-delay:0.15s">
+        <div class="testimonio-stars" aria-label="5 de 5 estrellas">
+          <span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span>
+          <span class="star" aria-hidden="true">★</span>
+        </div>
+        <blockquote class="testimonio-card__text">
+          "Entreno natación y pesas hace años, pero cuando le pregunté al Dr. Piña si podía tomar creatina con mis controles de creatinina un poco elevados, me dio la explicación más completa que he escuchado — incluyendo qué exámenes pedir y cuándo hacer seguimiento. No me dijo 'mejor no' como todos los demás. Me explicó el por qué."
+        </blockquote>
+        <p class="testimonio-card__author">— Rodrigo V., 38 años · Deportista recreacional · Concepción</p>
+      </div>
+
+    </div>
+
+    <p class="testimonios__legal">
+      Testimonios ilustrativos. Reemplazar con testimonios reales con consentimiento del paciente. Los resultados varían según cada persona.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     LEAD MAGNET
+============================================================ -->
+<section class="lead-magnet" id="recurso-gratuito" aria-labelledby="lm-h2">
+  <div class="container">
+    <div class="lead-magnet__inner">
+
+      <div class="lead-magnet__content fade-in-up">
+        <div class="lead-magnet__badge">Gratis</div>
+        <h2 id="lm-h2">Guía Médica de Creatina:<br>¿La necesito si hago o no hago ejercicio?</h2>
+        <p style="font-size:var(--text-body);color:var(--gris-body);margin-top:var(--space-2);line-height:1.65">
+          La creatina es el suplemento más estudiado de la historia. Pero casi nadie explica cuándo sí, cuándo no, y cómo varía según tu nivel de actividad física. Esta guía lo hace — con evidencia real, sin exageración.
+        </p>
+        <ul class="lead-magnet__bullets">
+          <li>Qué es la creatina y cómo actúa en el músculo y el cerebro</li>
+          <li>Beneficios documentados para personas SIN actividad física regular</li>
+          <li>Cómo maximizar su efecto si entrenas fuerza, natación o deportes de equipo</li>
+          <li>Dosis según tu perfil (sedentario / activo / deportista)</li>
+          <li>Quién NO debería tomarla sin supervisión médica</li>
+          <li>Respuestas a los mitos más comunes sobre retención de líquidos y riñones</li>
+        </ul>
+      </div>
+
+      <div class="lead-magnet__form-wrap fade-in-up" style="transition-delay:0.15s">
+        <form id="lm-form" novalidate>
+          <div class="form-group">
+            <label for="lm-nombre">Tu nombre</label>
+            <input
+              type="text"
+              id="lm-nombre"
+              name="nombre"
+              placeholder="Ingresa tu nombre"
+              required
+              autocomplete="given-name"
+            >
+          </div>
+          <div class="form-group">
+            <label for="lm-email">Tu email</label>
+            <input
+              type="email"
+              id="lm-email"
+              name="email"
+              placeholder="correo@ejemplo.com"
+              required
+              autocomplete="email"
+            >
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            Quiero la guía gratuita
+          </button>
+          <p class="form-microcopy">Sin spam. Puedes darte de baja cuando quieras.</p>
+        </form>
+
+        <div class="form-success" id="lm-success" role="alert" aria-live="polite">
+          <div class="form-success__icon" aria-hidden="true">✅</div>
+          <p>Listo. Revisa tu email — te lo enviamos en los próximos minutos.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     NOTICIAS Y ACTUALIZACIÓN MÉDICA
+============================================================ -->
+<section class="noticias" id="noticias" aria-labelledby="noticias-h2">
+  <div class="container">
+    <p class="eyebrow section-eyebrow eyebrow--cyan" style="color:var(--azul-primario)">Evidencia y actualización</p>
+    <h2 id="noticias-h2" class="section-title">Lo que dice la ciencia hoy</h2>
+
+    <div class="noticias__grid">
+
+      <div class="noticia-card fade-in-up">
+        <span class="noticia-tag">Ejercicio y HTA</span>
+        <h3>El ejercicio aeróbico reduce la presión arterial tanto como un medicamento antihipertensivo</h3>
+        <p>Un metaanálisis con más de 15.000 participantes confirmó que el ejercicio aeróbico estructurado (caminar, natación, ciclismo) produce reducciones de presión sistólica comparables a los fármacos de primera línea en pacientes con HTA leve a moderada.</p>
+        <a class="noticia-source" href="https://bjsm.bmj.com/" target="_blank" rel="noopener noreferrer">
+          → British Journal of Sports Medicine, 2023. Edwards et al.
+        </a>
+      </div>
+
+      <div class="noticia-card fade-in-up" style="transition-delay:0.1s">
+        <span class="noticia-tag">Creatina y Salud</span>
+        <h3>La creatina no es solo para deportistas: beneficios cognitivos y musculares en adultos mayores sedentarios</h3>
+        <p>Estudios recientes muestran que la suplementación con creatina monohidratada mejora la función cognitiva, la fuerza muscular y la calidad de vida en personas mayores de 60 años, incluso sin ejercicio sistemático. La dosis óptima es de 3–5 g/día.</p>
+        <a class="noticia-source" href="https://www.mdpi.com/journal/nutrients" target="_blank" rel="noopener noreferrer">
+          → Nutrients, 2023. Forbes et al. / J. Int. Society of Sports Nutrition.
+        </a>
+      </div>
+
+      <div class="noticia-card fade-in-up" style="transition-delay:0.2s">
+        <span class="noticia-tag">DM2 y Movimiento</span>
+        <h3>Combinar ejercicio de fuerza y aeróbico reduce la HbA1c más que cualquiera de los dos solos en DM2</h3>
+        <p>La Asociación Americana de Diabetes actualizó sus guías en 2024: la combinación de entrenamiento de resistencia muscular + ejercicio cardiovascular produce mejoras superiores en control glucémico, sensibilidad a la insulina y composición corporal en pacientes con DM2 tipo 2.</p>
+        <a class="noticia-source" href="https://diabetesjournals.org/care" target="_blank" rel="noopener noreferrer">
+          → Diabetes Care, 2024. ADA Standards of Medical Care.
+        </a>
+      </div>
+
+    </div>
+
+    <p class="noticias__disclaimer">
+      Contenido informativo basado en evidencia científica publicada. No reemplaza la evaluación médica individual. Las recomendaciones deben ajustarse a cada caso clínico específico.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+============================================================ -->
+<section class="faq" id="faq" aria-labelledby="faq-h2">
+  <div class="container">
+    <h2 id="faq-h2" class="section-title">Preguntas frecuentes</h2>
+
+    <div class="faq__list">
+
+      <details>
+        <summary>
+          ¿Cómo me puede evaluar un médico por videollamada?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq__answer">
+          <p>
+            Es una pregunta completamente válida. Para diseñar tu plan de ejercicio médico, lo que necesito saber es tu historial, tus medicamentos, tus antecedentes y cómo responde tu cuerpo. Todo eso lo podemos revisar en detalle por videollamada — con el mismo nivel de profundidad que en una consulta presencial, sin que tengas que trasladarte ni esperar.
+          </p>
+          <p>
+            Los elementos que hacen la diferencia en este tipo de prescripción no requieren que estés físicamente presente. Requieren tiempo, preguntas correctas y que alguien con la formación adecuada interprete toda esa información en función de tu condición específica. Eso es exactamente lo que hago.
+          </p>
+          <a href="https://wa.me/56964573590" class="faq__micro-cta" target="_blank" rel="noopener noreferrer">
+            Agenda una consulta y compruébalo →
+          </a>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Ya lo intenté antes con un entrenador y no funcionó. ¿Por qué esto sería diferente?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq__answer">
+          <p>
+            Si ya lo intentaste antes y no funcionó, probablemente no fue porque te faltó esfuerzo — fue porque el plan no estaba diseñado para tu cuerpo y tu condición. Un entrenador no tiene acceso a tu historial clínico, no puede interpretar tus medicamentos, no puede definir qué señales de alarma son relevantes para ti.
+          </p>
+          <p>
+            Esa es exactamente la diferencia de empezar con una evaluación médica. El primer paso no es el ejercicio — es la evaluación. Y esa evaluación es la que hace que todo lo que viene después tenga sentido para tu caso específico.
+          </p>
+          <a href="#servicios" class="faq__micro-cta">
+            Ver cómo funciona la consulta inicial →
+          </a>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          ¿Es seguro hacer ejercicio con hipertensión o diabetes?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq__answer">
+          <p>
+            Tienes razón en tener precaución — ese cuidado es inteligente, no exagerado. No cualquier ejercicio es adecuado para cualquier condición. La diferencia está en tener a alguien que sepa exactamente qué es seguro para ti — con tu nivel de presión actual, con los medicamentos que tomas, con tus antecedentes específicos.
+          </p>
+          <p>
+            En mi experiencia clínica, el ejercicio bien prescrito es uno de los recursos más efectivos para el manejo de HTA y DM2. La palabra clave es "bien prescrito". Eso es lo que hace que sea seguro y beneficioso — y eso es exactamente lo que construimos juntos en la consulta.
+          </p>
+          <a href="https://wa.me/56964573590" class="faq__micro-cta" target="_blank" rel="noopener noreferrer">
+            Agenda tu evaluación →
+          </a>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Ya tengo mi médico de cabecera. ¿Para qué necesito esto?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq__answer">
+          <p>
+            Tu médico de cabecera diagnostica, trata y controla tu condición crónica — y eso es fundamental. El rol que cubro es diferente: la prescripción del ejercicio como herramienta clínica activa. Es un complemento, no un reemplazo.
+          </p>
+          <p>
+            La mayoría de los médicos generales e internistas no tienen formación específica en cómo el ejercicio interactúa con la HTA, la DM2 o la dislipidemia — eso requiere entrenamiento adicional en medicina deportiva. No es una crítica — es simplemente la realidad de la formación médica. Ese es exactamente el espacio que ocupo.
+          </p>
+          <a href="#mecanismo" class="faq__micro-cta">
+            Entender el mecanismo único →
+          </a>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          ¿Cómo agendo y cuáles son las formas de pago?
+          <span class="faq__arrow" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq__answer">
+          <p>
+            El agendamiento es 100% en línea a través de la plataforma de reservas — eliges el horario disponible, confirmas en segundos y recibes el enlace a la videollamada por email. Sin llamadas, sin esperas.
+          </p>
+          <p>
+            Las consultas se pagan al momento de reservar. Aceptamos tarjetas de crédito y débito, transferencia bancaria y los principales medios de pago disponibles en Chile. El valor exacto de cada modalidad está detallado en la sección de planes.
+          </p>
+          <a href="#servicios" class="faq__micro-cta">
+            Ver planes y precios →
+          </a>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA FINAL
+============================================================ -->
+<section class="cta-final" id="agendar" aria-labelledby="cta-h2">
+  <!-- Línea kinética superior -->
+  <div class="cta-final__kinetic" aria-hidden="true">
+    <svg viewBox="0 0 1200 16" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:16px;display:block">
+      <path d="M 0 10 Q 300 2 600 10 Q 900 18 1200 10" stroke="#00C2FF" stroke-width="3" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="cta-final__inner fade-in-up">
+      <h2 id="cta-h2">
+        Ya tienes la indicación.<br>Ahora tienes a alguien que te explica el cómo.
+      </h2>
+      <p class="cta-final__sub">
+        Agenda en línea en menos de 2 minutos. Confirmas al instante — sin llamadas, sin esperas.
+      </p>
+
+      <div class="cta-final__btns">
+        <a href="https://wa.me/56964573590"
+           class="btn btn-whatsapp"
+           style="font-size:1.0625rem;padding:16px 36px"
+           target="_blank" rel="noopener noreferrer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Agendar mi consulta
+        </a>
+        <a href="#recurso-gratuito" class="btn btn-outline">
+          Primero quiero la guía gratuita
+        </a>
+      </div>
+
+      <p class="cta-final__micro">Confirmación instantánea. Sin compromiso. Cancela hasta 24h antes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__inner">
+
+      <div>
+        <p class="footer__brand-name">Dr. Gerson Javier Piña Chirinos</p>
+        <p class="footer__brand-sub">Médico Deportivo y Pacientes Crónicos · Telemedicina Chile</p>
+        <div class="footer__redes">
+          <a href="https://www.instagram.com/drgersonpina/" target="_blank" rel="noopener noreferrer">
+            📷 Instagram: @drgersonpina
+          </a>
+          <a href="https://www.linkedin.com/in/dr-gerson-pi%C3%B1a-chirinos-00095540a/" target="_blank" rel="noopener noreferrer">
+            💼 LinkedIn: Dr. Gerson Piña Chirinos
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            ▶ YouTube — próximamente
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer">
+            🎵 TikTok — próximamente
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__legal">
+        <p class="footer__legal-title">Aviso legal y privacidad</p>
+        <p>
+          Los datos personales que compartas serán tratados de acuerdo con la Ley 19.628 sobre Protección de la Vida Privada (Chile). No serán cedidos a terceros sin tu consentimiento explícito.
+        </p>
+        <p>
+          El contenido de este sitio tiene carácter informativo y no reemplaza la consulta médica presencial cuando esta sea necesaria. La información aquí publicada no constituye un diagnóstico ni un tratamiento médico.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer__divider"></div>
+    <p class="footer__copy">© 2026 Dr. Gerson Javier Piña Chirinos. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY WHATSAPP BAR (mobile)
+============================================================ -->
+<!-- PENDIENTE: Número de WhatsApp -->
+<a href="https://wa.me/56964573590"
+   class="sticky-wa"
+   id="sticky-wa"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Agendar mi consulta en línea">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L0 24l6.332-1.658A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.86 0-3.607-.484-5.127-1.333l-.366-.214-3.752.982.998-3.648-.239-.376A9.947 9.947 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
+  </svg>
+  📅 Agendar mi consulta
+</a>
+
+<!-- ============================================================
+     MODAL PRE-CONSULTA (Fase 2)
+============================================================ -->
+<div id="pc-modal" class="emergency-modal" role="dialog" aria-modal="true" aria-labelledby="pc-title" hidden>
+  <div class="emergency-modal__overlay" id="pc-overlay"></div>
+  <div class="emergency-modal__box pc-modal__box">
+    <button class="emergency-modal__close" id="pc-close" aria-label="Cerrar">✕</button>
+
+    <!-- Indicador de pasos -->
+    <div class="pc-steps" aria-hidden="true">
+      <div class="pc-dot pc-dot--active" id="pc-dot-1">1</div>
+      <div class="pc-line" id="pc-line-1"></div>
+      <div class="pc-dot" id="pc-dot-2">2</div>
+      <div class="pc-line" id="pc-line-2"></div>
+      <div class="pc-dot" id="pc-dot-3">3</div>
+    </div>
+
+    <!-- PASO 1 — Perfil -->
+    <div class="pc-step" id="pc-s1">
+      <h3 id="pc-title">¿Cuál es tu perfil?</h3>
+      <p>Selecciona el que mejor te describe. El Dr. Piña usará esta información para preparar tu consulta.</p>
+
+      <div class="pc-profile-grid" role="group" aria-label="Elige tu perfil">
+        <div class="pc-profile-card" data-profile="cronico" tabindex="0" role="radio" aria-checked="false">
+          <div class="pc-profile-icon">🫀</div>
+          <p class="pc-profile-title">Paciente crónico</p>
+          <p class="pc-profile-desc">HTA, DM2, obesidad u otra condición</p>
+        </div>
+        <div class="pc-profile-card" data-profile="deportivo" tabindex="0" role="radio" aria-checked="false">
+          <div class="pc-profile-icon">🏃</div>
+          <p class="pc-profile-title">Deportista</p>
+          <p class="pc-profile-desc">Activo, recreacional o competitivo</p>
+        </div>
+        <div class="pc-profile-card" data-profile="mixto" tabindex="0" role="radio" aria-checked="false">
+          <div class="pc-profile-icon">💪</div>
+          <p class="pc-profile-title">Quiero empezar</p>
+          <p class="pc-profile-desc">Tengo una condición y quiero moverme</p>
+        </div>
+      </div>
+
+      <div class="pc-nav">
+        <button class="btn btn-primary" id="pc-next-1" style="width:100%" disabled aria-disabled="true">
+          Continuar →
+        </button>
+      </div>
+    </div>
+
+    <!-- PASO 2 — Datos + condición -->
+    <div class="pc-step pc-step--hidden" id="pc-s2">
+      <h3>Tus datos y situación</h3>
+      <p>Toda la información es confidencial y solo la verá el Dr. Piña.</p>
+
+      <div class="pc-field">
+        <label for="pc-nombre">Nombre *</label>
+        <input type="text" id="pc-nombre" placeholder="Tu nombre completo" autocomplete="given-name">
+      </div>
+
+      <div class="pc-field">
+        <label for="pc-email">Email *</label>
+        <input type="email" id="pc-email" placeholder="correo@ejemplo.com" autocomplete="email">
+      </div>
+
+      <!-- Condición crónica (visible para crónico y mixto) -->
+      <div class="pc-field" id="pc-condicion-wrap">
+        <label>¿Qué condición tienes? (puedes marcar varias)</label>
+        <div class="pc-checks">
+          <label class="pc-check-label"><input type="checkbox" name="condicion" value="HTA"> Hipertensión</label>
+          <label class="pc-check-label"><input type="checkbox" name="condicion" value="DM2"> Diabetes tipo 2</label>
+          <label class="pc-check-label"><input type="checkbox" name="condicion" value="Dislipidemia"> Dislipidemia</label>
+          <label class="pc-check-label"><input type="checkbox" name="condicion" value="Obesidad"> Obesidad</label>
+          <label class="pc-check-label"><input type="checkbox" name="condicion" value="Otra"> Otra condición</label>
+          <label class="pc-check-label"><input type="checkbox" name="condicion" value="Sin diagnóstico"> Sin diagnóstico</label>
+        </div>
+      </div>
+
+      <!-- Deporte (visible para deportivo y mixto) -->
+      <div class="pc-field pc-step--hidden" id="pc-deporte-wrap">
+        <label for="pc-deporte">¿Qué actividad practicas?</label>
+        <input type="text" id="pc-deporte" placeholder="Ej: natación, crossfit, fútbol, ciclismo…">
+      </div>
+
+      <div class="pc-nav">
+        <button class="btn btn-outline" id="pc-prev-2">← Volver</button>
+        <button class="btn btn-primary" id="pc-next-2" style="flex:1">Continuar →</button>
+      </div>
+    </div>
+
+    <!-- PASO 3 — Objetivo + envío -->
+    <div class="pc-step pc-step--hidden" id="pc-s3">
+      <h3>¿Qué quieres lograr?</h3>
+      <p>Una última pregunta. El Dr. Piña leerá tu respuesta antes de la consulta.</p>
+
+      <div class="pc-field">
+        <label for="pc-objetivo">Tu objetivo o consulta principal *</label>
+        <textarea id="pc-objetivo" placeholder="Ej: Quiero saber cómo empezar a trotar con mi hipertensión. Mi médico me dijo que haga ejercicio pero no me explicó cómo…"></textarea>
+      </div>
+
+      <div class="pc-field">
+        <label for="pc-medicamentos">¿Tomas medicamentos? <span style="font-weight:400;color:var(--gris-placeholder)">(opcional)</span></label>
+        <input type="text" id="pc-medicamentos" placeholder="Ej: Losartán 50mg, Metformina 850mg…">
+      </div>
+
+      <div class="pc-nav">
+        <button class="btn btn-outline" id="pc-prev-3">← Volver</button>
+        <button class="btn btn-primary" id="pc-submit" style="flex:1">Enviar pre-consulta →</button>
+      </div>
+    </div>
+
+    <!-- ÉXITO -->
+    <div class="pc-success pc-step--hidden" id="pc-success">
+      <div class="pc-success__icon">✅</div>
+      <h3>Pre-consulta enviada</h3>
+      <p>El Dr. Piña revisará tu información. El siguiente paso es elegir tu horario — hazlo ahora para asegurar el cupo.</p>
+      <a href="https://wa.me/56964573590"
+         class="btn btn-whatsapp btn-full"
+         target="_blank" rel="noopener noreferrer">
+        📅 Elegir mi horario →
+      </a>
+      <p style="margin-top:var(--space-2);font-size:var(--text-caption);color:var(--gris-placeholder)">
+        También te enviaremos un resumen por email.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================================================
+     BOTÓN EMERGENCIA + MODAL
+============================================================ -->
+<button id="emergency-fab" class="emergency-fab" aria-label="¿Es una emergencia? Ver síntomas y números de urgencia" aria-haspopup="dialog">
+  🚨 Emergencia
+</button>
+
+<div id="emergency-modal" class="emergency-modal" role="dialog" aria-modal="true" aria-labelledby="emergency-title" hidden>
+  <div class="emergency-modal__overlay" id="emergency-overlay"></div>
+  <div class="emergency-modal__box">
+    <button class="emergency-modal__close" id="emergency-close" aria-label="Cerrar modal de emergencia">✕</button>
+
+    <h2 id="emergency-title">🚨 ¿Cuándo ir a urgencias?</h2>
+    <p>Si presentas alguno de estos síntomas, busca atención de emergencia <strong>de inmediato</strong>. No esperes consulta médica programada.</p>
+
+    <ul class="emergency-symptoms" role="list">
+      <li>Dolor en el pecho, presión opresiva o sensación de "peso" en el pecho</li>
+      <li>Dificultad para respirar en reposo o al mínimo esfuerzo</li>
+      <li>Pérdida de consciencia o desmayo súbito</li>
+      <li>Parálisis o debilidad repentina de cara, brazo o pierna</li>
+      <li>Confusión mental, dificultad para hablar o entender</li>
+      <li>Presión arterial mayor a 180/110 mmHg con síntomas</li>
+      <li>Glucemia mayor a 400 mg/dL con malestar general</li>
+      <li>Palpitaciones rápidas con mareos, síncope o dolor en el pecho</li>
+      <li>Dolor de cabeza súbito e intenso ("el peor de tu vida")</li>
+    </ul>
+
+    <div class="emergency-numbers" role="list" aria-label="Números de emergencia en Chile">
+      <a href="tel:131" class="emergency-num-btn emergency-num-btn--samu" role="listitem" aria-label="Llamar al SAMU, número 131">
+        131
+        <span>SAMU</span>
+      </a>
+      <a href="tel:133" class="emergency-num-btn emergency-num-btn--carab" role="listitem" aria-label="Llamar a Carabineros, número 133">
+        133
+        <span>Carabineros</span>
+      </a>
+      <a href="tel:132" class="emergency-num-btn emergency-num-btn--bomb" role="listitem" aria-label="Llamar a Bomberos, número 132">
+        132
+        <span>Bomberos</span>
+      </a>
+    </div>
+
+    <p class="emergency-disclaimer">
+      Esta información tiene carácter orientativo y no reemplaza la evaluación médica de urgencia. Ante cualquier duda, llama al SAMU (131).
+    </p>
+  </div>
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+  // Intersection Observer para animaciones fade-in-up
+  (function() {
+    const targets = document.querySelectorAll('.fade-in-up');
+    if (!targets.length) return;
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    targets.forEach(function(el) { observer.observe(el); });
+  })();
+
+  // Lead magnet form
+  (function() {
+    var form = document.getElementById('lm-form');
+    var success = document.getElementById('lm-success');
+    if (!form || !success) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nombre = form.querySelector('#lm-nombre').value.trim();
+      var email  = form.querySelector('#lm-email').value.trim();
+
+      if (!nombre || !email || !email.includes('@')) {
+        var inputs = form.querySelectorAll('input');
+        inputs.forEach(function(inp) {
+          if (!inp.value.trim()) {
+            inp.style.borderColor = '#EF4444';
+          }
+        });
+        return;
+      }
+
+      // Notificar al Dr. por email + mostrar éxito
+      var asunto = encodeURIComponent('Nuevo lead — Guía Creatina: ' + nombre + ' (' + email + ')');
+      var cuerpo  = encodeURIComponent(
+        '═══ NUEVO LEAD — GUÍA CREATINA ═══\n\n' +
+        'Nombre:  ' + nombre + '\n' +
+        'Email:   ' + email + '\n' +
+        'Guía:    Creatina — uso en pacientes con y sin actividad física\n' +
+        'Fecha:   ' + new Date().toLocaleString('es-CL') + '\n\n' +
+        'Acción: Enviar la guía al email del lead.' +
+        '\n════════════════════════════'
+      );
+      window.open('mailto:gushutaker@gmail.com?subject=' + asunto + '&body=' + cuerpo, '_blank');
+      form.style.display = 'none';
+      success.style.display = 'block';
+    });
+
+    // Reset error styling on input
+    form.querySelectorAll('input').forEach(function(inp) {
+      inp.addEventListener('input', function() {
+        this.style.borderColor = '';
+      });
+    });
+  })();
+
+  // Sticky WhatsApp bar — aparece después del hero
+  (function() {
+    var hero = document.getElementById('inicio');
+    var bar  = document.getElementById('sticky-wa');
+    if (!hero || !bar) return;
+
+    var shown = false;
+
+    function checkScroll() {
+      var heroBottom = hero.getBoundingClientRect().bottom;
+      if (!shown && heroBottom < 0) {
+        bar.style.display = 'flex';
+        shown = true;
+      } else if (shown && heroBottom >= 0) {
+        bar.style.display = 'none';
+        shown = false;
+      }
+    }
+
+    window.addEventListener('scroll', checkScroll, { passive: true });
+  })();
+
+  // FAQ smooth open (garantizar accesibilidad en teclado)
+  document.querySelectorAll('.faq details').forEach(function(detail) {
+    detail.addEventListener('toggle', function() {
+      if (this.open) {
+        document.querySelectorAll('.faq details[open]').forEach(function(other) {
+          if (other !== detail) other.removeAttribute('open');
+        });
+      }
+    });
+  });
+
+  // ============================================================
+  // MODAL PRE-CONSULTA (Fase 2)
+  // ============================================================
+  (function() {
+    var modal      = document.getElementById('pc-modal');
+    var overlay    = document.getElementById('pc-overlay');
+    var closeBtn   = document.getElementById('pc-close');
+    if (!modal) return;
+
+    // Elementos de pasos
+    var steps    = [document.getElementById('pc-s1'), document.getElementById('pc-s2'), document.getElementById('pc-s3')];
+    var success  = document.getElementById('pc-success');
+    var dots     = [document.getElementById('pc-dot-1'), document.getElementById('pc-dot-2'), document.getElementById('pc-dot-3')];
+    var lines    = [document.getElementById('pc-line-1'), document.getElementById('pc-line-2')];
+    var currentStep = 0;
+    var selectedProfile = '';
+
+    // Abrir / cerrar
+    function openPc() {
+      resetModal();
+      modal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closePc() {
+      modal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+    }
+
+    function resetModal() {
+      currentStep = 0;
+      selectedProfile = '';
+      showStep(0);
+      dots.forEach(function(d) { d.className = 'pc-dot'; });
+      lines.forEach(function(l) { l.className = 'pc-line'; });
+      dots[0].classList.add('pc-dot--active');
+      document.querySelectorAll('.pc-profile-card').forEach(function(c) {
+        c.classList.remove('pc-profile-card--selected');
+        c.setAttribute('aria-checked', 'false');
+      });
+      document.getElementById('pc-next-1').disabled = true;
+      document.getElementById('pc-nombre').value = '';
+      document.getElementById('pc-email').value = '';
+      document.getElementById('pc-objetivo').value = '';
+      document.getElementById('pc-medicamentos').value = '';
+      document.querySelectorAll('.pc-checks input').forEach(function(cb) { cb.checked = false; });
+      success.classList.add('pc-step--hidden');
+    }
+
+    function showStep(idx) {
+      steps.forEach(function(s, i) {
+        if (i === idx) s.classList.remove('pc-step--hidden');
+        else s.classList.add('pc-step--hidden');
+      });
+      // Actualizar dots
+      dots.forEach(function(d, i) {
+        d.className = 'pc-dot';
+        if (i < idx) d.classList.add('pc-dot--done');
+        else if (i === idx) d.classList.add('pc-dot--active');
+      });
+      // Actualizar líneas
+      lines.forEach(function(l, i) {
+        l.className = i < idx ? 'pc-line pc-line--done' : 'pc-line';
+      });
+      currentStep = idx;
+    }
+
+    // Interceptar botones de agendamiento (excluyendo sticky-wa y nav)
+    document.querySelectorAll('a[href*="56964573590"]').forEach(function(link) {
+      if (link.id === 'sticky-wa' || link.closest('.nav__actions') || link.closest('#pc-success')) return;
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        openPc();
+      });
+    });
+
+    // Cerrar
+    closeBtn.addEventListener('click', closePc);
+    overlay.addEventListener('click', closePc);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closePc();
+    });
+
+    // Paso 1 — selección de perfil
+    document.querySelectorAll('.pc-profile-card').forEach(function(card) {
+      function select() {
+        document.querySelectorAll('.pc-profile-card').forEach(function(c) {
+          c.classList.remove('pc-profile-card--selected');
+          c.setAttribute('aria-checked', 'false');
+        });
+        card.classList.add('pc-profile-card--selected');
+        card.setAttribute('aria-checked', 'true');
+        selectedProfile = card.dataset.profile;
+        var nextBtn = document.getElementById('pc-next-1');
+        nextBtn.disabled = false;
+        nextBtn.removeAttribute('aria-disabled');
+      }
+      card.addEventListener('click', select);
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(); }
+      });
+    });
+
+    document.getElementById('pc-next-1').addEventListener('click', function() {
+      if (!selectedProfile) return;
+      // Mostrar/ocultar campos según perfil
+      var condWrap  = document.getElementById('pc-condicion-wrap');
+      var deporteWrap = document.getElementById('pc-deporte-wrap');
+      if (selectedProfile === 'cronico') {
+        condWrap.classList.remove('pc-step--hidden');
+        deporteWrap.classList.add('pc-step--hidden');
+      } else if (selectedProfile === 'deportivo') {
+        condWrap.classList.add('pc-step--hidden');
+        deporteWrap.classList.remove('pc-step--hidden');
+      } else { // mixto
+        condWrap.classList.remove('pc-step--hidden');
+        deporteWrap.classList.remove('pc-step--hidden');
+      }
+      showStep(1);
+      document.getElementById('pc-nombre').focus();
+    });
+
+    // Paso 2 — validar y avanzar
+    document.getElementById('pc-prev-2').addEventListener('click', function() { showStep(0); });
+
+    document.getElementById('pc-next-2').addEventListener('click', function() {
+      var nombre = document.getElementById('pc-nombre');
+      var email  = document.getElementById('pc-email');
+      var ok = true;
+      [nombre, email].forEach(function(f) {
+        f.classList.remove('pc-error');
+        if (!f.value.trim() || (f.type === 'email' && !f.value.includes('@'))) {
+          f.classList.add('pc-error');
+          ok = false;
+        }
+      });
+      if (!ok) { nombre.focus(); return; }
+      showStep(2);
+      document.getElementById('pc-objetivo').focus();
+    });
+
+    // Paso 3 — envío
+    document.getElementById('pc-prev-3').addEventListener('click', function() { showStep(1); });
+
+    document.getElementById('pc-submit').addEventListener('click', function() {
+      var obj = document.getElementById('pc-objetivo');
+      obj.classList.remove('pc-error');
+      if (!obj.value.trim()) { obj.classList.add('pc-error'); obj.focus(); return; }
+
+      // Recopilar datos (placeholder — conectar con backend / email service en Fase 2)
+      var condiciones = Array.from(document.querySelectorAll('.pc-checks input:checked')).map(function(c) { return c.value; });
+      var datos = {
+        perfil:       selectedProfile,
+        nombre:       document.getElementById('pc-nombre').value.trim(),
+        email:        document.getElementById('pc-email').value.trim(),
+        condiciones:  condiciones,
+        deporte:      document.getElementById('pc-deporte') ? document.getElementById('pc-deporte').value.trim() : '',
+        objetivo:     obj.value.trim(),
+        medicamentos: document.getElementById('pc-medicamentos').value.trim(),
+        fecha:        new Date().toLocaleString('es-CL')
+      };
+
+      // Enviar por email (mailto — sin backend; reemplazar por EmailJS en producción)
+      var perfilLabel = { cronico: 'Paciente Crónico', deportivo: 'Deportista', mixto: 'Crónico + quiere entrenar' };
+      var asunto = encodeURIComponent('Pre-consulta: ' + datos.nombre + ' — ' + (perfilLabel[datos.perfil] || datos.perfil));
+      var cuerpo  = encodeURIComponent(
+        '═══ PRE-CONSULTA DR. PIÑA ═══\n\n' +
+        'Perfil:        ' + (perfilLabel[datos.perfil] || datos.perfil) + '\n' +
+        'Nombre:        ' + datos.nombre + '\n' +
+        'Email:         ' + datos.email + '\n' +
+        'Condiciones:   ' + (datos.condiciones.length ? datos.condiciones.join(', ') : '—') + '\n' +
+        'Deporte/activ: ' + (datos.deporte || '—') + '\n\n' +
+        'OBJETIVO:\n' + datos.objetivo + '\n\n' +
+        'Medicamentos:  ' + (datos.medicamentos || 'Sin medicamentos') + '\n\n' +
+        'Enviado:       ' + datos.fecha + '\n' +
+        '════════════════════════════'
+      );
+      window.open('mailto:gushutaker@gmail.com?subject=' + asunto + '&body=' + cuerpo, '_blank');
+
+      // Mostrar éxito
+      steps.forEach(function(s) { s.classList.add('pc-step--hidden'); });
+      dots.forEach(function(d) { d.className = 'pc-dot pc-dot--done'; });
+      lines.forEach(function(l) { l.className = 'pc-line pc-line--done'; });
+      success.classList.remove('pc-step--hidden');
+    });
+
+  })();
+
+  // Selector de perfil en planes
+  (function() {
+    var btns  = document.querySelectorAll('.planes__path-btn');
+    var cards = document.querySelectorAll('#planes-grid .plan-card');
+    if (!btns.length || !cards.length) return;
+
+    btns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var path = this.dataset.path;
+
+        btns.forEach(function(b) { b.classList.remove('planes__path-btn--active'); });
+        this.classList.add('planes__path-btn--active');
+
+        cards.forEach(function(card) {
+          var cardPath = card.dataset.path;
+          if (path === 'all' || cardPath === 'all' || cardPath === path) {
+            card.classList.remove('plan-hidden');
+          } else {
+            card.classList.add('plan-hidden');
+          }
+        });
+      });
+    });
+  })();
+
+  // Modal emergencia
+  (function() {
+    var fab     = document.getElementById('emergency-fab');
+    var modal   = document.getElementById('emergency-modal');
+    var closeBtn = document.getElementById('emergency-close');
+    var overlay = document.getElementById('emergency-overlay');
+    if (!fab || !modal) return;
+
+    function openModal() {
+      modal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      fab.focus();
+    }
+
+    fab.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeModal();
+    });
+  })();
+</script>
+
+</body>
+</html>
