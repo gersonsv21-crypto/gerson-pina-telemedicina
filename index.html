@@ -1927,6 +1927,31 @@
       margin-top: auto;
     }
 
+    /* Ancla de precio — texto verde bajo el nombre del plan */
+    .plan-anchor {
+      font-size: var(--text-caption);
+      color: var(--verde-confirmacion);
+      font-weight: 600;
+      margin: -6px 0 var(--space-2);
+      line-height: 1.4;
+    }
+
+    /* Label de grupo en vista "Todos" */
+    .planes__group-label {
+      grid-column: 1 / -1;
+      font-family: var(--font-heading);
+      font-size: var(--text-body-sm);
+      font-weight: 700;
+      color: var(--gris-placeholder);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding-bottom: var(--space-1);
+      border-bottom: 1px solid var(--gris-borde);
+      margin-top: var(--space-2);
+    }
+
+    .planes__group-label:first-child { margin-top: 0; }
+
     .noticias__disclaimer {
       text-align: center;
       margin-top: var(--space-4);
@@ -2242,10 +2267,6 @@
   </div>
 </div>
 
-<!-- BANNER DESARROLLO -->
-<div class="dev-banner">
-  🔧 MODO DESARROLLO — Pendientes: <strong>① URL Reservo.cl para agendar</strong> · <strong>② Confirmar precios CLP</strong> · <strong>③ URLs YouTube / TikTok</strong> · <strong>④ Testimonios reales con consentimiento</strong>
-</div>
 
 <!-- ============================================================
      NAV
@@ -2515,42 +2536,46 @@
 
     <div class="planes__grid" id="planes-grid">
 
-      <!-- Plan 1 — Consulta Única (ambos perfiles) -->
-      <div class="plan-card plan-card--individual fade-in-up" data-path="all">
-        <div class="plan-badge">Consulta única</div>
-        <h3>Evaluación de Inicio</h3>
-        <p class="plan-card__desc">Para cualquier perfil. Una sesión completa donde evaluamos tu condición, tus antecedentes y definimos desde dónde partes.</p>
-        <p class="plan-nota">Disponible como punto de entrada para ambos perfiles. Si decides continuar con un plan mensual, el valor se descuenta.</p>
+      <!-- ───── GRUPO CRÓNICO ───── -->
+      <div class="planes__group-label" data-path="cronico">🫀 Paciente crónico</div>
+
+      <!-- C1 — Crónico · Evaluación -->
+      <div class="plan-card plan-card--cronico fade-in-up" data-path="cronico">
+        <div class="plan-badge">Crónico · Inicio</div>
+        <h3>Consulta de Evaluación</h3>
+        <p class="plan-card__desc">Para conocer tu punto de partida. Revisamos tu condición, medicamentos y definimos si el ejercicio es seguro para ti ahora mismo.</p>
+        <p class="plan-nota">Sin compromiso de continuidad. Si decides seguir con un plan, el valor se descuenta del primer mes.</p>
         <p class="plan-price">
           $45.000 CLP<br>
           <span class="plan-price__note">pago único · 60 min · videollamada</span>
         </p>
         <ul class="plan-list">
           <li>Evaluación médica completa por videollamada</li>
-          <li>Revisión de historial, antecedentes y medicamentos</li>
-          <li>Definición de signos de alarma personalizados</li>
-          <li>Plan de inicio detallado al terminar la sesión</li>
+          <li>Revisión de diagnósticos, antecedentes y medicamentos</li>
+          <li>Identificación de signos de alarma personalizados</li>
+          <li>Recomendación de inicio adaptada a tu condición</li>
         </ul>
         <a href="https://wa.me/56964573590"
            class="btn btn-primary btn-full"
            target="_blank" rel="noopener noreferrer">
-          Agendar consulta
+          Agendar evaluación
         </a>
       </div>
 
-      <!-- Plan 2 — Crónico (RECOMENDADO) -->
-      <div class="plan-card plan-card--cronico plan-card--recomendado fade-in-up" data-path="cronico" style="transition-delay:0.1s">
-        <div class="plan-badge">Paciente crónico</div>
+      <!-- C2 — Crónico · Plan Salud Activa (RECOMENDADO) -->
+      <div class="plan-card plan-card--cronico plan-card--recomendado fade-in-up" data-path="cronico" style="transition-delay:0.08s">
+        <div class="plan-badge">⭐ Más elegido</div>
         <h3>Plan Salud Activa</h3>
-        <p class="plan-card__desc">Para personas con HTA, DM2, dislipidemia u obesidad que quieren ejercitarse de forma segura con acompañamiento médico mensual.</p>
+        <p class="plan-anchor">Todo el seguimiento esencial · al 69% del precio del Plan Integral</p>
+        <p class="plan-card__desc">Para avanzar con acompañamiento médico real. Seguimiento mensual, ajuste de plan y acceso directo entre sesiones.</p>
         <p class="plan-price">
           $89.000 CLP<br>
-          <span class="plan-price__note">mensual · renovación mensual</span>
+          <span class="plan-price__note">mensual · sin contrato · cancela cuando quieras</span>
         </p>
         <ul class="plan-list">
           <li>Evaluación inicial completa (60 min)</li>
           <li>Plan de ejercicio médico personalizado</li>
-          <li>2 controles mensuales de seguimiento</li>
+          <li>2 controles mensuales de seguimiento (30 min c/u)</li>
           <li>Ajuste del plan según respuesta de tu cuerpo</li>
           <li>Canal directo de consultas entre sesiones</li>
           <li>Reporte mensual de avance clínico</li>
@@ -2562,22 +2587,97 @@
         </a>
       </div>
 
-      <!-- Plan 3 — Deportivo -->
-      <div class="plan-card plan-card--deportivo fade-in-up" data-path="deportivo" style="transition-delay:0.2s">
-        <div class="plan-badge">Medicina deportiva</div>
-        <h3>Plan Rendimiento</h3>
-        <p class="plan-card__desc">Para deportistas recreacionales o activos que buscan optimización, prevención de lesiones y prescripción médica del entrenamiento.</p>
+      <!-- C3 — Crónico · Plan Salud Integral -->
+      <div class="plan-card plan-card--cronico fade-in-up" data-path="cronico" style="transition-delay:0.16s">
+        <div class="plan-badge">Crónico · Completo</div>
+        <h3>Plan Salud Integral</h3>
+        <p class="plan-card__desc">Para quien quiere el máximo control. Más sesiones, análisis de exámenes y pauta de nutrición básica incluida.</p>
         <p class="plan-price">
           $129.000 CLP<br>
-          <span class="plan-price__note">mensual · renovación mensual</span>
+          <span class="plan-price__note">mensual · sin contrato · cancela cuando quieras</span>
+        </p>
+        <ul class="plan-list">
+          <li>Todo lo del Plan Salud Activa</li>
+          <li>4 controles mensuales (seguimiento quincenal)</li>
+          <li>Análisis e interpretación de exámenes de laboratorio</li>
+          <li>Pauta de nutrición básica adaptada a tu condición</li>
+          <li>Prioridad de agenda · respuesta en menos de 4 horas</li>
+          <li>Consultas de urgencia sin costo adicional</li>
+        </ul>
+        <a href="https://wa.me/56964573590"
+           class="btn btn-outline btn-full"
+           target="_blank" rel="noopener noreferrer">
+          Consultar disponibilidad
+        </a>
+      </div>
+
+      <!-- ───── GRUPO DEPORTIVO ───── -->
+      <div class="planes__group-label" data-path="deportivo">🏃 Medicina deportiva</div>
+
+      <!-- D1 — Deportivo · Evaluación -->
+      <div class="plan-card plan-card--deportivo fade-in-up" data-path="deportivo">
+        <div class="plan-badge">Deportivo · Inicio</div>
+        <h3>Evaluación Deportiva</h3>
+        <p class="plan-card__desc">Para saber exactamente en qué punto estás. Sesión inicial completa antes de optimizar cualquier plan de entrenamiento.</p>
+        <p class="plan-nota">Incluye recomendaciones de inicio con respaldo médico. Sin compromiso de continuar.</p>
+        <p class="plan-price">
+          $55.000 CLP<br>
+          <span class="plan-price__note">pago único · 60 min · videollamada</span>
+        </p>
+        <ul class="plan-list">
+          <li>Evaluación funcional y deportiva completa</li>
+          <li>Revisión de historial de lesiones y entrenamientos</li>
+          <li>Análisis de suplementación actual</li>
+          <li>Recomendaciones de inicio con prescripción médica</li>
+        </ul>
+        <a href="https://wa.me/56964573590"
+           class="btn btn-primary btn-full"
+           target="_blank" rel="noopener noreferrer">
+          Agendar evaluación
+        </a>
+      </div>
+
+      <!-- D2 — Deportivo · Plan Rendimiento (RECOMENDADO) -->
+      <div class="plan-card plan-card--deportivo plan-card--recomendado fade-in-up" data-path="deportivo" style="transition-delay:0.08s">
+        <div class="plan-badge">⭐ Más elegido</div>
+        <h3>Plan Rendimiento</h3>
+        <p class="plan-anchor">El 85% del Plan Elite · al 66% del precio</p>
+        <p class="plan-card__desc">Para optimizar de verdad. Plan de entrenamiento con prescripción médica, seguimiento mensual y estrategia de suplementación.</p>
+        <p class="plan-price">
+          $99.000 CLP<br>
+          <span class="plan-price__note">mensual · sin contrato · cancela cuando quieras</span>
         </p>
         <ul class="plan-list">
           <li>Evaluación deportiva funcional completa</li>
           <li>Plan de entrenamiento con prescripción médica</li>
-          <li>Controles quincenales de seguimiento</li>
+          <li>2 sesiones mensuales de control y ajuste</li>
           <li>Estrategia de suplementación basada en evidencia</li>
-          <li>Análisis de respuesta al ejercicio y ajuste progresivo</li>
-          <li>Canal directo prioritario · Reporte de rendimiento</li>
+          <li>Canal directo prioritario con el Dr. Piña</li>
+          <li>Reporte mensual de rendimiento</li>
+        </ul>
+        <a href="https://wa.me/56964573590"
+           class="btn btn-whatsapp btn-full"
+           target="_blank" rel="noopener noreferrer">
+          Quiero este plan
+        </a>
+      </div>
+
+      <!-- D3 — Deportivo · Plan Elite -->
+      <div class="plan-card plan-card--deportivo fade-in-up" data-path="deportivo" style="transition-delay:0.16s">
+        <div class="plan-badge">Deportivo · Elite</div>
+        <h3>Plan Elite</h3>
+        <p class="plan-card__desc">Para el deportista que no deja nada al azar. Seguimiento intensivo, nutrición deportiva y recuperación médicamente supervisada.</p>
+        <p class="plan-price">
+          $149.000 CLP<br>
+          <span class="plan-price__note">mensual · sin contrato · cancela cuando quieras</span>
+        </p>
+        <ul class="plan-list">
+          <li>Todo lo del Plan Rendimiento</li>
+          <li>4 sesiones mensuales (seguimiento semanal)</li>
+          <li>Nutrición deportiva personalizada con macros</li>
+          <li>Protocolo de recuperación activa supervisado</li>
+          <li>Acceso prioritario · respuesta en menos de 2 horas</li>
+          <li>Análisis de exámenes hormonales y metabólicos</li>
         </ul>
         <a href="https://wa.me/56964573590"
            class="btn btn-outline btn-full"
@@ -3540,8 +3640,9 @@
 
   // Selector de perfil en planes
   (function() {
-    var btns  = document.querySelectorAll('.planes__path-btn');
-    var cards = document.querySelectorAll('#planes-grid .plan-card');
+    var btns   = document.querySelectorAll('.planes__path-btn');
+    var cards  = document.querySelectorAll('#planes-grid .plan-card');
+    var labels = document.querySelectorAll('#planes-grid .planes__group-label');
     if (!btns.length || !cards.length) return;
 
     btns.forEach(function(btn) {
@@ -3553,11 +3654,15 @@
 
         cards.forEach(function(card) {
           var cardPath = card.dataset.path;
-          if (path === 'all' || cardPath === 'all' || cardPath === path) {
+          if (path === 'all' || cardPath === path) {
             card.classList.remove('plan-hidden');
           } else {
             card.classList.add('plan-hidden');
           }
+        });
+
+        labels.forEach(function(label) {
+          label.style.display = (path === 'all' || label.dataset.path === path) ? '' : 'none';
         });
       });
     });
