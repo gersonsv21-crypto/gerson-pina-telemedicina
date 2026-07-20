@@ -1343,6 +1343,39 @@
       color: rgba(255,255,255,0.5);
     }
 
+    .cta-final__reservo {
+      margin: var(--space-6) auto 0;
+      max-width: 480px;
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      background: var(--blanco-puro);
+    }
+
+    .cta-final__reservo iframe {
+      display: block;
+      width: 100%;
+      height: 550px;
+      border: 0;
+    }
+
+    .cta-final__reservo-credito {
+      display: block;
+      padding: var(--space-1) var(--space-2);
+      background: var(--gris-azulado);
+      font-size: var(--text-caption);
+      color: var(--gris-body);
+      text-decoration: none;
+    }
+
+    .cta-final__reservo-credito:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      .cta-final__reservo iframe { height: 480px; }
+    }
+
     /* ============================================================
        FOOTER
     ============================================================ */
@@ -3138,6 +3171,16 @@
       </div>
 
       <p class="cta-final__micro">Confirmación instantánea. Sin compromiso. Cancela hasta 24h antes.</p>
+
+      <!-- Agenda online Reservo — reemplaza al placeholder "Booking URL" pendiente -->
+      <div class="cta-final__reservo">
+        <iframe
+          src="https://agendamiento.reservo.cl/makereserva/agenda/f0Dai1G0f05fnE8J9511teY9e6H9JD"
+          title="Agenda tu consulta online con el Dr. Gerson Piña — Reservo"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="cta-final__reservo-credito" href="https://agendamiento.reservo.cl" target="_blank" rel="noopener noreferrer">Powered by Reservo</a>
+      </div>
     </div>
   </div>
 </section>
