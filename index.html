@@ -2107,56 +2107,6 @@
       margin-bottom: var(--space-3);
     }
 
-    /* Cards de selección de perfil */
-    .pc-profile-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-2);
-      margin-bottom: var(--space-4);
-    }
-
-    @media (min-width: 440px) {
-      .pc-profile-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    .pc-profile-card {
-      border: 2px solid var(--gris-borde);
-      border-radius: var(--border-radius-md);
-      padding: var(--space-3) var(--space-2);
-      text-align: center;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
-      background: var(--blanco-puro);
-      user-select: none;
-    }
-
-    .pc-profile-card:hover {
-      border-color: var(--azul-primario);
-      background: var(--gris-azulado);
-    }
-
-    .pc-profile-card--selected {
-      border-color: var(--azul-primario);
-      background: rgba(29,78,216,0.06);
-      box-shadow: 0 0 0 2px rgba(29,78,216,0.15);
-    }
-
-    .pc-profile-icon { font-size: 2rem; margin-bottom: 6px; }
-
-    .pc-profile-title {
-      font-family: var(--font-body);
-      font-size: var(--text-body-sm);
-      font-weight: 700;
-      color: var(--carbon);
-      line-height: 1.25;
-    }
-
-    .pc-profile-desc {
-      font-size: var(--text-caption);
-      color: var(--gris-placeholder);
-      margin-top: 3px;
-      line-height: 1.35;
-    }
 
     /* Campos de formulario */
     .pc-field { margin-bottom: var(--space-3); }
@@ -3207,43 +3157,11 @@
       <div class="pc-dot pc-dot--active" id="pc-dot-1">1</div>
       <div class="pc-line" id="pc-line-1"></div>
       <div class="pc-dot" id="pc-dot-2">2</div>
-      <div class="pc-line" id="pc-line-2"></div>
-      <div class="pc-dot" id="pc-dot-3">3</div>
     </div>
 
-    <!-- PASO 1 — Perfil -->
+    <!-- PASO 1 — Datos + condición (el perfil ya se conoce: viene del plan Crónico o Deportivo elegido) -->
     <div class="pc-step" id="pc-s1">
-      <h3 id="pc-title">¿Cuál es tu perfil?</h3>
-      <p>Selecciona el que mejor te describe. El Dr. Piña usará esta información para preparar tu consulta.</p>
-
-      <div class="pc-profile-grid" role="group" aria-label="Elige tu perfil">
-        <div class="pc-profile-card" data-profile="cronico" tabindex="0" role="radio" aria-checked="false">
-          <div class="pc-profile-icon">🫀</div>
-          <p class="pc-profile-title">Paciente crónico</p>
-          <p class="pc-profile-desc">HTA, DM2, obesidad u otra condición</p>
-        </div>
-        <div class="pc-profile-card" data-profile="deportivo" tabindex="0" role="radio" aria-checked="false">
-          <div class="pc-profile-icon">🏃</div>
-          <p class="pc-profile-title">Deportista</p>
-          <p class="pc-profile-desc">Activo, recreacional o competitivo</p>
-        </div>
-        <div class="pc-profile-card" data-profile="mixto" tabindex="0" role="radio" aria-checked="false">
-          <div class="pc-profile-icon">💪</div>
-          <p class="pc-profile-title">Quiero empezar</p>
-          <p class="pc-profile-desc">Tengo una condición y quiero moverme</p>
-        </div>
-      </div>
-
-      <div class="pc-nav">
-        <button class="btn btn-primary" id="pc-next-1" style="width:100%" disabled aria-disabled="true">
-          Continuar →
-        </button>
-      </div>
-    </div>
-
-    <!-- PASO 2 — Datos + condición -->
-    <div class="pc-step pc-step--hidden" id="pc-s2">
-      <h3>Tus datos y situación</h3>
+      <h3 id="pc-title">Tus datos y situación</h3>
       <p>Toda la información es confidencial y solo la verá el Dr. Piña.</p>
 
       <div class="pc-field">
@@ -3256,7 +3174,7 @@
         <input type="email" id="pc-email" placeholder="correo@ejemplo.com" autocomplete="email">
       </div>
 
-      <!-- Condición crónica (único perfil que llega a este paso) -->
+      <!-- Condición crónica — solo se muestra cuando el perfil detectado es "cronico" -->
       <div class="pc-field" id="pc-condicion-wrap">
         <label>¿Qué condición tienes? (puedes marcar varias)</label>
         <div class="pc-checks">
@@ -3270,13 +3188,12 @@
       </div>
 
       <div class="pc-nav">
-        <button class="btn btn-outline" id="pc-prev-2">← Volver</button>
-        <button class="btn btn-primary" id="pc-next-2" style="flex:1">Continuar →</button>
+        <button class="btn btn-primary" id="pc-next-1" style="width:100%">Continuar →</button>
       </div>
     </div>
 
-    <!-- PASO 3 — Objetivo + envío -->
-    <div class="pc-step pc-step--hidden" id="pc-s3">
+    <!-- PASO 2 — Objetivo + envío -->
+    <div class="pc-step pc-step--hidden" id="pc-s2">
       <h3>¿Qué quieres lograr?</h3>
       <p>Una última pregunta. El Dr. Piña leerá tu respuesta antes de la consulta.</p>
 
@@ -3291,7 +3208,7 @@
       </div>
 
       <div class="pc-nav">
-        <button class="btn btn-outline" id="pc-prev-3">← Volver</button>
+        <button class="btn btn-outline" id="pc-prev-2">← Volver</button>
         <button class="btn btn-primary" id="pc-submit" style="flex:1">Enviar pre-consulta →</button>
       </div>
     </div>
@@ -3467,11 +3384,13 @@
     if (!modal) return;
 
     // Elementos de pasos
-    var steps    = [document.getElementById('pc-s1'), document.getElementById('pc-s2'), document.getElementById('pc-s3')];
+    var steps    = [document.getElementById('pc-s1'), document.getElementById('pc-s2')];
     var success  = document.getElementById('pc-success');
-    var dots     = [document.getElementById('pc-dot-1'), document.getElementById('pc-dot-2'), document.getElementById('pc-dot-3')];
-    var lines    = [document.getElementById('pc-line-1'), document.getElementById('pc-line-2')];
+    var dots     = [document.getElementById('pc-dot-1'), document.getElementById('pc-dot-2')];
+    var lines    = [document.getElementById('pc-line-1')];
     var currentStep = 0;
+    // Perfil detectado automáticamente por la tarjeta de plan que abrió el modal
+    // ("cronico" o "deportivo") — ya no se pregunta, se infiere del data-path del plan.
     var selectedProfile = '';
 
     // Abrir / cerrar
@@ -3489,22 +3408,18 @@
 
     function resetModal() {
       currentStep = 0;
-      selectedProfile = '';
       showStep(0);
       dots.forEach(function(d) { d.className = 'pc-dot'; });
       lines.forEach(function(l) { l.className = 'pc-line'; });
       dots[0].classList.add('pc-dot--active');
-      document.querySelectorAll('.pc-profile-card').forEach(function(c) {
-        c.classList.remove('pc-profile-card--selected');
-        c.setAttribute('aria-checked', 'false');
-      });
-      document.getElementById('pc-next-1').disabled = true;
       document.getElementById('pc-nombre').value = '';
       document.getElementById('pc-email').value = '';
       document.getElementById('pc-objetivo').value = '';
       document.getElementById('pc-medicamentos').value = '';
       document.querySelectorAll('.pc-checks input').forEach(function(cb) { cb.checked = false; });
       success.classList.add('pc-step--hidden');
+      // El bloque de condición crónica solo aplica al perfil "cronico"
+      document.getElementById('pc-condicion-wrap').style.display = (selectedProfile === 'cronico') ? '' : 'none';
     }
 
     function showStep(idx) {
@@ -3525,14 +3440,23 @@
       currentStep = idx;
     }
 
-    // Interceptar todos los botones de "Agendar" del sitio (incluida la barra sticky
-    // mobile, que también dice "Agendar mi consulta") para preguntar el perfil primero.
+    // Interceptar botones de "Agendar" del sitio:
+    // - Si el botón pertenece a una tarjeta de plan Crónico o Deportivo (data-path en
+    //   la tarjeta), el perfil ya se conoce → abre el modal directo en el paso de datos.
+    // - Los botones genéricos (nav, hero, barra sticky mobile, CTA final) representan un
+    //   control general/morbilidad general → van directo a Reservo, sin modal.
     // Se excluye solo el botón de la pantalla de éxito, que ya tiene su propio destino.
     document.querySelectorAll('a[href*="56964573590"]').forEach(function(link) {
       if (link.closest('#pc-success')) return;
+      var planCard = link.closest('.plan-card[data-path]');
       link.addEventListener('click', function(e) {
         e.preventDefault();
-        openPc();
+        if (planCard) {
+          selectedProfile = planCard.dataset.path;
+          openPc();
+        } else {
+          window.open(RESERVO_URL, '_blank');
+        }
       });
     });
 
@@ -3543,45 +3467,8 @@
       if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closePc();
     });
 
-    // Paso 1 — selección de perfil
-    document.querySelectorAll('.pc-profile-card').forEach(function(card) {
-      function select() {
-        document.querySelectorAll('.pc-profile-card').forEach(function(c) {
-          c.classList.remove('pc-profile-card--selected');
-          c.setAttribute('aria-checked', 'false');
-        });
-        card.classList.add('pc-profile-card--selected');
-        card.setAttribute('aria-checked', 'true');
-        selectedProfile = card.dataset.profile;
-        var nextBtn = document.getElementById('pc-next-1');
-        nextBtn.disabled = false;
-        nextBtn.removeAttribute('aria-disabled');
-      }
-      card.addEventListener('click', select);
-      card.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); select(); }
-      });
-    });
-
+    // Paso 1 — datos + condición — validar y avanzar
     document.getElementById('pc-next-1').addEventListener('click', function() {
-      if (!selectedProfile) return;
-
-      // Solo el perfil "Paciente crónico" necesita el cuestionario completo antes de agendar
-      // (condición, medicamentos, objetivo) — deportista y "quiero empezar" van directo a Reservo.
-      if (selectedProfile !== 'cronico') {
-        closePc();
-        window.open(RESERVO_URL, '_blank');
-        return;
-      }
-
-      showStep(1);
-      document.getElementById('pc-nombre').focus();
-    });
-
-    // Paso 2 — validar y avanzar
-    document.getElementById('pc-prev-2').addEventListener('click', function() { showStep(0); });
-
-    document.getElementById('pc-next-2').addEventListener('click', function() {
       var nombre = document.getElementById('pc-nombre');
       var email  = document.getElementById('pc-email');
       var ok = true;
@@ -3593,12 +3480,12 @@
         }
       });
       if (!ok) { nombre.focus(); return; }
-      showStep(2);
+      showStep(1);
       document.getElementById('pc-objetivo').focus();
     });
 
-    // Paso 3 — envío
-    document.getElementById('pc-prev-3').addEventListener('click', function() { showStep(1); });
+    // Paso 2 — objetivo — volver y envío
+    document.getElementById('pc-prev-2').addEventListener('click', function() { showStep(0); });
 
     document.getElementById('pc-submit').addEventListener('click', function() {
       var obj = document.getElementById('pc-objetivo');
