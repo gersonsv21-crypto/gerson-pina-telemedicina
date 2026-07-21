@@ -1343,39 +1343,6 @@
       color: rgba(255,255,255,0.5);
     }
 
-    .cta-final__reservo {
-      margin: var(--space-6) auto 0;
-      max-width: 480px;
-      border-radius: var(--border-radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      background: var(--blanco-puro);
-    }
-
-    .cta-final__reservo iframe {
-      display: block;
-      width: 100%;
-      height: 550px;
-      border: 0;
-    }
-
-    .cta-final__reservo-credito {
-      display: block;
-      padding: var(--space-1) var(--space-2);
-      background: var(--gris-azulado);
-      font-size: var(--text-caption);
-      color: var(--gris-body);
-      text-decoration: none;
-    }
-
-    .cta-final__reservo-credito:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 480px) {
-      .cta-final__reservo iframe { height: 480px; }
-    }
-
     /* ============================================================
        FOOTER
     ============================================================ */
@@ -2377,15 +2344,11 @@
         </p>
 
         <div class="hero__ctas">
-          <!-- PENDIENTE: Número de WhatsApp -->
           <a href="https://wa.me/56964573590"
              class="btn btn-whatsapp"
              target="_blank"
              rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L0 24l6.332-1.658A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.86 0-3.607-.484-5.127-1.333l-.366-.214-3.752.982.998-3.648-.239-.376A9.947 9.947 0 012 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
-            </svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             Agendar mi consulta
           </a>
           <a href="#proceso" class="btn btn-outline">¿Cómo funciona?</a>
@@ -3171,16 +3134,6 @@
       </div>
 
       <p class="cta-final__micro">Confirmación instantánea. Sin compromiso. Cancela hasta 24h antes.</p>
-
-      <!-- Agenda online Reservo — reemplaza al placeholder "Booking URL" pendiente -->
-      <div class="cta-final__reservo">
-        <iframe
-          src="https://agendamiento.reservo.cl/makereserva/agenda/f0Dai1G0f05fnE8J9511teY9e6H9JD"
-          title="Agenda tu consulta online con el Dr. Gerson Piña — Reservo"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <a class="cta-final__reservo-credito" href="https://agendamiento.reservo.cl" target="_blank" rel="noopener noreferrer">Powered by Reservo</a>
-      </div>
     </div>
   </div>
 </section>
@@ -3307,7 +3260,7 @@
         <input type="email" id="pc-email" placeholder="correo@ejemplo.com" autocomplete="email">
       </div>
 
-      <!-- Condición crónica (visible para crónico y mixto) -->
+      <!-- Condición crónica (único perfil que llega a este paso) -->
       <div class="pc-field" id="pc-condicion-wrap">
         <label>¿Qué condición tienes? (puedes marcar varias)</label>
         <div class="pc-checks">
@@ -3318,12 +3271,6 @@
           <label class="pc-check-label"><input type="checkbox" name="condicion" value="Otra"> Otra condición</label>
           <label class="pc-check-label"><input type="checkbox" name="condicion" value="Sin diagnóstico"> Sin diagnóstico</label>
         </div>
-      </div>
-
-      <!-- Deporte (visible para deportivo y mixto) -->
-      <div class="pc-field pc-step--hidden" id="pc-deporte-wrap">
-        <label for="pc-deporte">¿Qué actividad practicas?</label>
-        <input type="text" id="pc-deporte" placeholder="Ej: natación, crossfit, fútbol, ciclismo…">
       </div>
 
       <div class="pc-nav">
@@ -3356,17 +3303,14 @@
     <!-- ÉXITO -->
     <div class="pc-success pc-step--hidden" id="pc-success">
       <div class="pc-success__icon">✅</div>
-      <h3>Pre-consulta lista</h3>
-      <p>Se abrió WhatsApp con tu información lista — envía el mensaje y el Dr. Piña la revisará. ¿No se abrió? Usa el botón de abajo.</p>
-      <a href="https://wa.me/56964573590"
+      <h3>Listo, ahora elige tu horario</h3>
+      <p>Se abrió Reservo en una nueva pestaña para que agendes tu consulta. ¿No se abrió? Usa el botón de abajo.</p>
+      <a href="https://agendamiento.reservo.cl/makereserva/agenda/f0Dai1G0f05fnE8J9511teY9e6H9JD"
          id="pc-wa-cta"
          class="btn btn-whatsapp btn-full"
          target="_blank" rel="noopener noreferrer">
-        📅 Enviar y elegir mi horario →
+        📅 Elegir mi horario →
       </a>
-      <p style="margin-top:var(--space-2);font-size:var(--text-caption);color:var(--gris-placeholder)">
-        También te enviaremos un resumen por email.
-      </p>
     </div>
 
   </div>
@@ -3520,6 +3464,7 @@
   // MODAL PRE-CONSULTA (Fase 2)
   // ============================================================
   (function() {
+    var RESERVO_URL = 'https://agendamiento.reservo.cl/makereserva/agenda/f0Dai1G0f05fnE8J9511teY9e6H9JD';
     var modal      = document.getElementById('pc-modal');
     var overlay    = document.getElementById('pc-overlay');
     var closeBtn   = document.getElementById('pc-close');
@@ -3584,9 +3529,10 @@
       currentStep = idx;
     }
 
-    // Interceptar botones de agendamiento (excluyendo sticky-wa y nav)
+    // Interceptar todos los botones de "Agendar" (excluyendo sticky-wa, que es contacto
+    // general por WhatsApp, y el botón de la pantalla de éxito) para preguntar el perfil primero.
     document.querySelectorAll('a[href*="56964573590"]').forEach(function(link) {
-      if (link.id === 'sticky-wa' || link.closest('.nav__actions') || link.closest('#pc-success')) return;
+      if (link.id === 'sticky-wa' || link.closest('#pc-success')) return;
       link.addEventListener('click', function(e) {
         e.preventDefault();
         openPc();
@@ -3622,19 +3568,15 @@
 
     document.getElementById('pc-next-1').addEventListener('click', function() {
       if (!selectedProfile) return;
-      // Mostrar/ocultar campos según perfil
-      var condWrap  = document.getElementById('pc-condicion-wrap');
-      var deporteWrap = document.getElementById('pc-deporte-wrap');
-      if (selectedProfile === 'cronico') {
-        condWrap.classList.remove('pc-step--hidden');
-        deporteWrap.classList.add('pc-step--hidden');
-      } else if (selectedProfile === 'deportivo') {
-        condWrap.classList.add('pc-step--hidden');
-        deporteWrap.classList.remove('pc-step--hidden');
-      } else { // mixto
-        condWrap.classList.remove('pc-step--hidden');
-        deporteWrap.classList.remove('pc-step--hidden');
+
+      // Solo el perfil "Paciente crónico" necesita el cuestionario completo antes de agendar
+      // (condición, medicamentos, objetivo) — deportista y "quiero empezar" van directo a Reservo.
+      if (selectedProfile !== 'cronico') {
+        closePc();
+        window.open(RESERVO_URL, '_blank');
+        return;
       }
+
       showStep(1);
       document.getElementById('pc-nombre').focus();
     });
@@ -3666,36 +3608,12 @@
       obj.classList.remove('pc-error');
       if (!obj.value.trim()) { obj.classList.add('pc-error'); obj.focus(); return; }
 
-      // Recopilar datos (placeholder — conectar con backend / email service en Fase 2)
-      var condiciones = Array.from(document.querySelectorAll('.pc-checks input:checked')).map(function(c) { return c.value; });
-      var datos = {
-        perfil:       selectedProfile,
-        nombre:       document.getElementById('pc-nombre').value.trim(),
-        email:        document.getElementById('pc-email').value.trim(),
-        condiciones:  condiciones,
-        deporte:      document.getElementById('pc-deporte') ? document.getElementById('pc-deporte').value.trim() : '',
-        objetivo:     obj.value.trim(),
-        medicamentos: document.getElementById('pc-medicamentos').value.trim(),
-        fecha:        new Date().toLocaleString('es-CL')
-      };
-
-      // Enviar por WhatsApp — canal principal, confiable en móvil
-      // (mailto: fallaba silenciosamente en celulares sin app de correo configurada)
-      var perfilLabel = { cronico: 'Paciente Crónico', deportivo: 'Deportista', mixto: 'Crónico + quiere entrenar' };
-      var waTexto = encodeURIComponent(
-        'Hola Dr. Piña, le envío mi pre-consulta:\n\n' +
-        'Perfil: ' + (perfilLabel[datos.perfil] || datos.perfil) + '\n' +
-        'Nombre: ' + datos.nombre + '\n' +
-        'Email: ' + datos.email + '\n' +
-        'Condiciones: ' + (datos.condiciones.length ? datos.condiciones.join(', ') : '—') + '\n' +
-        'Deporte/actividad: ' + (datos.deporte || '—') + '\n' +
-        'Objetivo: ' + datos.objetivo + '\n' +
-        'Medicamentos: ' + (datos.medicamentos || 'Sin medicamentos')
-      );
-      var waUrl = 'https://wa.me/56964573590?text=' + waTexto;
-      var pcCta = document.getElementById('pc-wa-cta');
-      if (pcCta) pcCta.href = waUrl;
-      window.open(waUrl, '_blank');
+      // NOTA: el cuestionario (condiciones, medicamentos, objetivo) ya no se envía por
+      // WhatsApp — solo se usa para orientar al paciente antes de agendar. Sin backend
+      // conectado (pendiente Fase 2), esta información no llega hoy al Dr. Piña por
+      // ningún canal; si se necesita que la reciba, hay que conectar un envío (email/
+      // WhatsApp/CRM) antes de publicar esto como definitivo.
+      window.open(RESERVO_URL, '_blank');
 
       // Mostrar éxito
       steps.forEach(function(s) { s.classList.add('pc-step--hidden'); });
