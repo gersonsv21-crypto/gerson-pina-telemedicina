@@ -47,11 +47,6 @@
         "@type": "MedicalTherapy",
         "name": "Prescripción médica de ejercicio para pacientes crónicos",
         "description": "Evaluación y plan de ejercicio personalizado para personas con hipertensión, diabetes tipo 2, colesterol u obesidad"
-      },
-      {
-        "@type": "MedicalTherapy",
-        "name": "Consulta de medicina deportiva online",
-        "description": "Acompañamiento médico para deportistas y personas que desean iniciar actividad física de forma segura"
       }
     ],
     "areaServed": {
@@ -2478,6 +2473,9 @@
           <li>Necesitas una evaluación funcional deportiva de verdad</li>
           <li>Quieres prevenir lesiones antes de que aparezcan</li>
         </ul>
+        <p class="plan-nota" style="margin-top:1rem">
+          🔜 Medicina deportiva en preparación — disponible cuando el Dr. Piña termine el Diplomado de Medicina Deportiva (dic. 2026).
+        </p>
         <svg class="kinetic-line kinetic-line--card" viewBox="0 0 40 8" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M 0 5 Q 20 1 40 5" stroke="#00C2FF" stroke-width="3" fill="none" stroke-linecap="round"/>
         </svg>
@@ -2497,11 +2495,41 @@
       La consulta aislada está siempre disponible. Los planes, en cambio, están pensados para quienes quieren avanzar de verdad — con seguimiento, ajuste y acompañamiento médico continuo. <strong>Elige tu perfil y encuentra el plan que te corresponde.</strong>
     </p>
 
+    <!-- CONSULTA AISLADA — opción de entrada sin perfil, sin compromiso de continuidad.
+         Sin data-path a propósito: la intercepta el flujo genérico del modal (va directo
+         a Reservo, sin cuestionario) — ver comentario "PLANES Y PRECIOS" en el JS del modal.
+         Duracion confirmada por Gerson (2026-07-22): 20 min (antes 15 min). Bullets siguen siendo propuesta. -->
+    <div style="max-width:520px;margin:0 auto var(--space-6)">
+      <div class="plan-card plan-card--individual fade-in-up">
+        <div class="plan-badge">Consulta puntual</div>
+        <h3>Consulta Aislada</h3>
+        <p class="plan-card__desc">Para resolver un motivo puntual o una duda concreta, sin necesidad de evaluación completa ni compromiso de seguimiento.</p>
+        <p class="plan-nota">Si tu caso requiere seguimiento continuo, te lo indico en la misma consulta — sin costo adicional por decírtelo.</p>
+        <p class="plan-price">
+          $28.000 CLP<br>
+          <span class="plan-price__note">pago único · 20 min · videollamada</span>
+        </p>
+        <ul class="plan-list">
+          <li>Consulta médica online general</li>
+          <li>Resuelve una duda o motivo específico</li>
+          <li>Orientación clara sobre próximos pasos</li>
+          <li>Sin evaluación completa previa necesaria</li>
+        </ul>
+        <a href="https://wa.me/56964573590"
+           class="btn btn-primary btn-full"
+           target="_blank" rel="noopener noreferrer">
+          Agendar consulta aislada
+        </a>
+      </div>
+    </div>
+
     <!-- Selector de perfil -->
     <div class="planes__selector" role="group" aria-label="Filtrar planes por perfil">
       <button class="planes__path-btn planes__path-btn--active" data-path="all">Todos los planes</button>
       <button class="planes__path-btn" data-path="cronico">🫀 Soy paciente crónico</button>
-      <button class="planes__path-btn" data-path="deportivo">🏃 Soy deportista</button>
+      <!-- Medicina deportiva en pausa hasta que Gerson termine el Diplomado (dic. 2026) —
+           boton oculto a proposito, reactivar junto con el grupo de planes deportivo abajo. -->
+      <!-- <button class="planes__path-btn" data-path="deportivo">🏃 Soy deportista</button> -->
     </div>
 
     <div class="planes__grid" id="planes-grid">
@@ -2517,7 +2545,7 @@
         <p class="plan-nota">Sin compromiso de continuidad. Si decides seguir con un plan, el valor se descuenta del primer mes.</p>
         <p class="plan-price">
           $38.000 CLP<br>
-          <span class="plan-price__note">pago único · 60 min · videollamada</span>
+          <span class="plan-price__note">pago único · 30 min · videollamada</span>
         </p>
         <ul class="plan-list">
           <li>Evaluación médica completa por videollamada</li>
@@ -2536,14 +2564,14 @@
       <div class="plan-card plan-card--cronico plan-card--recomendado fade-in-up" data-path="cronico" style="transition-delay:0.08s">
         <div class="plan-badge">⭐ Más elegido</div>
         <h3>Plan Salud Activa</h3>
-        <p class="plan-anchor">Todo el seguimiento esencial · $34.000 menos que el Plan Integral</p>
+        <p class="plan-anchor">Seguimiento médico continuo, sin letra chica</p>
         <p class="plan-card__desc">Para avanzar con acompañamiento médico real. Seguimiento mensual, ajuste de plan y acceso directo entre sesiones.</p>
         <p class="plan-price">
           $75.000 CLP<br>
           <span class="plan-price__note">mensual · sin contrato · cancela cuando quieras</span>
         </p>
         <ul class="plan-list">
-          <li>Evaluación inicial completa (60 min)</li>
+          <li>Evaluación inicial completa (30 min)</li>
           <li>Plan de ejercicio médico personalizado</li>
           <li>2 controles mensuales de seguimiento (30 min c/u)</li>
           <li>Ajuste del plan según respuesta de tu cuerpo</li>
@@ -2557,7 +2585,10 @@
         </a>
       </div>
 
-      <!-- C3 — Crónico · Plan Salud Integral -->
+      <!-- ═══ PLAN SALUD INTEGRAL ELIMINADO (2026-07-22, a pedido de Gerson) ═══
+           Comentado, no borrado, por si se quiere retomar la idea más adelante
+           (posible programa de 12 semanas para paciente crónico, aún sin definir). -->
+      <!--
       <div class="plan-card plan-card--cronico fade-in-up" data-path="cronico" style="transition-delay:0.16s">
         <div class="plan-badge">Crónico · Completo</div>
         <h3>Plan Salud Integral</h3>
@@ -2580,11 +2611,16 @@
           Consultar disponibilidad
         </a>
       </div>
+      -->
 
-      <!-- ───── GRUPO DEPORTIVO ───── -->
+      <!-- ═══ MEDICINA DEPORTIVA EN PAUSA (2026-07-21) ═══
+           A pedido de Gerson: no se ofrece como servicio reservable hasta que termine
+           el Diplomado de Medicina Deportiva y Fisiología del Ejercicio (PUC, dic. 2026).
+           Bloque completo comentado, NO borrado — reactivar quitando este comentario
+           cuando corresponda. Incluye: grupo de planes D1/D2/D3 + boton filtro (ver arriba). -->
+      <!--
       <div class="planes__group-label" data-path="deportivo">🏃 Medicina deportiva</div>
 
-      <!-- D1 — Deportivo · Evaluación -->
       <div class="plan-card plan-card--deportivo fade-in-up" data-path="deportivo">
         <div class="plan-badge">Deportivo · Inicio</div>
         <h3>Evaluación Deportiva</h3>
@@ -2607,7 +2643,6 @@
         </a>
       </div>
 
-      <!-- D2 — Deportivo · Plan Rendimiento (RECOMENDADO) -->
       <div class="plan-card plan-card--deportivo plan-card--recomendado fade-in-up" data-path="deportivo" style="transition-delay:0.08s">
         <div class="plan-badge">⭐ Más elegido</div>
         <h3>Plan Rendimiento</h3>
@@ -2632,7 +2667,6 @@
         </a>
       </div>
 
-      <!-- D3 — Deportivo · Plan Elite -->
       <div class="plan-card plan-card--deportivo fade-in-up" data-path="deportivo" style="transition-delay:0.16s">
         <div class="plan-badge">Deportivo · Elite</div>
         <h3>Plan Elite</h3>
@@ -2655,6 +2689,7 @@
           Consultar disponibilidad
         </a>
       </div>
+      -->
 
     </div>
     <p style="text-align:center;margin-top:var(--space-3);font-size:var(--text-caption);color:var(--gris-placeholder)">Precios referenciales en CLP · IVA incluido · Sujeto a disponibilidad de agenda</p>
@@ -2680,7 +2715,7 @@
         <div class="step__num">2</div>
         <div class="step__icon" aria-hidden="true">🖥️</div>
         <h3>Evaluación médica</h3>
-        <p>Hablamos 60 minutos por videollamada. Revisamos tu historial, tus medicamentos y tus antecedentes. Sin apuro, sin respuestas genéricas.</p>
+        <p>Hablamos por videollamada el tiempo que tu consulta necesita. Revisamos tu historial, tus medicamentos y tus antecedentes. Sin apuro, sin respuestas genéricas.</p>
       </div>
 
       <div class="step fade-in-up" style="transition-delay:0.24s">
